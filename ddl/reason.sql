@@ -1,0 +1,18 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [reason]
+(
+	[r_reason_sk] [int] NOT NULL,
+	[r_reason_id] [char](16) NOT NULL,
+	[r_reason_desc] [char](100) NULL
+)
+WITH
+(
+	DISTRIBUTION = REPLICATE,
+	CLUSTERED COLUMNSTORE INDEX
+)
+GO
