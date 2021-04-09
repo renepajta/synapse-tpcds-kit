@@ -63,7 +63,7 @@ Following environmental variables need to be set
 Loading to Synapse is done via `COPY-TPCDSData.sh [SYNAPSE_URL] [DATABASE] [DATA_URL]`.
 * `SYNAPSE_URL` - Server URL - Synapse SQL DW Endpoint
 * `DATABASE` - Database name
-* `DATA_URL` - URL to data located in storage account (only ADLS Gen 2 supported)
+* `DATA_URL` - URL to data directory storage account where generated data was uploaded storage account (only ADLS Gen 2 supported), e.g. https://<storage_account_name>.dfs.core.windows.net/tpcds/dataset-1TB
 
 The list of tables to upload is sourced from **build_data_for_tables.txt**.
 
