@@ -60,13 +60,18 @@ Following environmental variables need to be set
 * `ACCOUNT_KEY` - ADLS Gen 2 account key
 
 ### Loading to Synapse DW
-Uses code snippets stored in `dml` directory. Before running them, update the URL to ADLS directory
+Loading to Synapse is done via `COPY-TPCDSData.sh [SYNAPSE_URL] [DATABASE] [DATA_URL]`.
+* `SYNAPSE_URL` - Server URL - Synapse SQL DW Endpoint
+* `DATABASE` - Database name
+* `DATA_URL` - URL to data located in storage account (only ADLS Gen 2 supported)
 
-```
-sed -i 's/DATA_URL/<YOUR_URL_HERE>/g' - dml/*.sql
-```
+The list of tables to upload is sourced from **build_data_for_tables.txt**.
 
-WIP: `Load-TPCDSData.sh` aims to automate this step but we are not there yet.
+NOTE: The scripts uses Synapse Managed Identity, therefore, it needs at least **Storage Blob Data Reader role** on the storage account.
+
+Following environmental variables need to be set
+* `SYNAPSE_USER` - User name
+* `SYNAPSE_USER_PWD` - User's password
 
 ### Query generation
 
