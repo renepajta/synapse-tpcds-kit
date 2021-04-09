@@ -40,15 +40,15 @@
        ,s_state
        ,count(ss_quantity) as store_sales_quantitycount
        ,avg(ss_quantity) as store_sales_quantityave
-       ,stddev_samp(ss_quantity) as store_sales_quantitystdev
-       ,stddev_samp(ss_quantity)/avg(ss_quantity) as store_sales_quantitycov
+       ,stdev(ss_quantity) as store_sales_quantitystdev
+       ,stdev(ss_quantity)/avg(ss_quantity) as store_sales_quantitycov
        ,count(sr_return_quantity) as store_returns_quantitycount
        ,avg(sr_return_quantity) as store_returns_quantityave
-       ,stddev_samp(sr_return_quantity) as store_returns_quantitystdev
-       ,stddev_samp(sr_return_quantity)/avg(sr_return_quantity) as store_returns_quantitycov
+       ,stdev(sr_return_quantity) as store_returns_quantitystdev
+       ,stdev(sr_return_quantity)/avg(sr_return_quantity) as store_returns_quantitycov
        ,count(cs_quantity) as catalog_sales_quantitycount ,avg(cs_quantity) as catalog_sales_quantityave
-       ,stddev_samp(cs_quantity) as catalog_sales_quantitystdev
-       ,stddev_samp(cs_quantity)/avg(cs_quantity) as catalog_sales_quantitycov
+       ,stdev(cs_quantity) as catalog_sales_quantitystdev
+       ,stdev(cs_quantity)/avg(cs_quantity) as catalog_sales_quantitycov
  from store_sales
      ,store_returns
      ,catalog_sales

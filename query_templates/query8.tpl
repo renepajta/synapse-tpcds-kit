@@ -44,9 +44,9 @@
      ,store,
      (select ca_zip
      from (
-      SELECT substr(ca_zip,1,5) ca_zip
+      SELECT substring(ca_zip,1,5) ca_zip
       FROM customer_address
-      WHERE substr(ca_zip,1,5) IN (
+      WHERE substring(ca_zip,1,5) IN (
                           '[ZIP.1]','[ZIP.2]','[ZIP.3]','[ZIP.4]','[ZIP.5]','[ZIP.6]',
                           '[ZIP.7]','[ZIP.8]','[ZIP.9]','[ZIP.10]','[ZIP.11]',
                           '[ZIP.12]','[ZIP.13]','[ZIP.14]','[ZIP.15]','[ZIP.16]',
@@ -129,7 +129,7 @@
                           '[ZIP.397]','[ZIP.398]','[ZIP.399]','[ZIP.400]')
      intersect
       select ca_zip
-      from (SELECT substr(ca_zip,1,5) ca_zip,count(*) cnt
+      from (SELECT substring(ca_zip,1,5) ca_zip,count(*) cnt
             FROM customer_address, customer
             WHERE ca_address_sk = c_current_addr_sk and
                   c_preferred_cust_flag='Y'
@@ -138,7 +138,7 @@
  where ss_store_sk = s_store_sk
   and ss_sold_date_sk = d_date_sk
   and d_qoy = [QOY] and d_year = [YEAR]
-  and (substr(s_zip,1,2) = substr(V1.ca_zip,1,2))
+  and (substring(s_zip,1,2) = substring(V1.ca_zip,1,2))
  group by s_store_name
  order by s_store_name
  [_LIMITC];

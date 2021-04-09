@@ -40,4 +40,9 @@ tags
 # Flat files
 *.dat
 
+/.data/*
+/.insert/*
 /.idea/*
+/.logs/*
+/.scripts/*
+

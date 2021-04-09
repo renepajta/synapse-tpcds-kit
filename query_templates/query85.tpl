@@ -38,7 +38,7 @@
  define YEAR= random(1998,2002, uniform);
  define _LIMIT=100;
 
- [_LIMITA] select [_LIMITB] substr(r_reason_desc,1,20)
+ [_LIMITA] select [_LIMITB] substring(r_reason_desc,1,20)
        ,avg(ws_quantity)
        ,avg(wr_refunded_cash)
        ,avg(wr_fee)
@@ -114,7 +114,7 @@
     )
    )
 group by r_reason_desc
-order by substr(r_reason_desc,1,20)
+order by substring(r_reason_desc,1,20)
         ,avg(ws_quantity)
         ,avg(wr_refunded_cash)
         ,avg(wr_fee)

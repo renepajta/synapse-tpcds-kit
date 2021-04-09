@@ -2,13 +2,7 @@
 
 The official TPC-DS tools can be found at [tpc.org](http://www.tpc.org/tpc_documents_current_versions/current_specifications.asp).
 
-This version is based on v2.4 and has been modified to:
-
-* Allow compilation under macOS (commit [2ec45c5](https://github.com/gregrahn/tpcds-kit/commit/2ec45c5ed97cc860819ee630770231eac738097c))
-* Address obvious query template bugs like 
-  * https://github.com/gregrahn/tpcds-kit/issues/30
-  * https://github.com/gregrahn/tpcds-kit/issues/31
-  * https://github.com/gregrahn/tpcds-kit/issues/33
+This version is based on v2.4 and has been modified to run on Azure Synapse with scripts supporting easy integration with Azure storage for generating data.
 
 ## Setup
 
@@ -21,9 +15,26 @@ Ubuntu:
 sudo apt-get install gcc make flex bison byacc git
 ```
 
-CentOS/RHEL: 
+Install Azure CLI as it's needed to upload generated data to Azure storage account
 ```
-sudo yum install gcc make flex bison byacc git
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+Install sqlcmd to run the queries (Ubuntu 16.04, for other version go [here](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools))
+
+```
+# Import the public repository GPG keys. 
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+# Register the Microsoft Ubuntu repository.
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+
+# Update the sources list and run the installation command with the unixODBC developer package.
+sudo apt-get update 
+sudo apt-get install mssql-tools unixodbc-dev
+
+# Optional: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell.
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 ```
 
 Then run the following commands to clone the repo and build the tools:
@@ -34,41 +45,38 @@ cd tpcds-kit/tools
 make OS=LINUX
 ```
 
-### macOS
-
-Make sure the required development tools are installed:
-
-```
-xcode-select --install
-```
- 
-Then run the following commands to clone the repo and build the tools:
-
-```
-git clone https://github.com/databricks/tpcds-kit.git
-cd tpcds-kit/tools
-make OS=MACOS
-```
-
 ## Using the TPC-DS tools
 
 ### Data generation
 
-Data generation is done via `dsdgen`.  See `dsdgen --help` for all options.  If you do not run `dsdgen` from the `tools/` directory then you will need to use the option `-DISTRIBUTIONS /.../tpcds-kit/tools/tpcds.idx`.
+Data generation is done via `Generate-TPCDSData.sh [SCALE_FACTOR] [TMP_DIR] [CONTAINER_NAME] [DATA_DIR]`.
+* `SCALE_FACTOR` - Scale Factor - The size of the data to be generated in Gigabytes, e.g. 1 = 1Gb
+* `TMP_DIR` - Temporary directory - The generated data will be stored here before uploaded to ADLS Gen 2
+* `CONTAINER_NAME` - ADLS Gen 2 Container name
+* `DATA_DIR` - ADLS Gen 2 directory - Location where data will be uploaded in storage account
+
+Following environmental variables need to be set
+* `ACCOUNT_NAME` - ADLS Gen 2 account name 
+* `ACCOUNT_KEY` - ADLS Gen 2 account key
+
+### Loading to Synapse DW
+Uses code snippets stored in `dml` directory. Before running them, update the URL to ADLS directory
+
+```
+sed -i 's/DATA_URL/<YOUR_URL_HERE>/g' - dml/*.sql
+```
+
+WIP: `Load-TPCDSData.sh` aims to automate this step but we are not there yet.
 
 ### Query generation
 
-Query generation is done via `dsqgen`.   See `dsqgen --help` for all options.
+Query generation is done via `Run-TPCDSTests.sh [SCALE_FACTOR] [SYNAPSE_URL] [DATABASE]`.  
+* `SCALE_FACTOR` - Scale Factor - The size of the data to be generated in Gigabytes, e.g. 1 = 1Gb
+* `SYNAPSE_URL` - Server URL - Synapse SQL DW Endpoint
+* `DATABASE` - Database name
 
-The following command can be used to generate all 99 queries in numerical order (`-QUALIFY`) for the 10TB scale factor (`-SCALE`) using the Netezza dialect template (`-DIALECT`) with the output going to `/tmp/query_0.sql` (`-OUTPUT_DIR`).
+Following environmental variables need to be set
+* `SYNAPSE_USER` - User name
+* `SYNAPSE_USER_PWD` - User's password
 
-```
-dsqgen \
--DIRECTORY ../query_templates \
--INPUT ../query_templates/templates.lst \
--VERBOSE Y \
--QUALIFY Y \
--SCALE 10000 \
--DIALECT netezza \
--OUTPUT_DIR /tmp
-```
+NOTE: User must have set a default schema as schema is not part of the queries.
