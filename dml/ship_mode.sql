@@ -3,7 +3,7 @@ TRUNCATE TABLE ship_mode;
 
 
 COPY INTO ship_mode
-FROM 'DATA_URL/ship_mode.dat'
+FROM 'DATA_URL/ship_mode/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

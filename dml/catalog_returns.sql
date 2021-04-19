@@ -3,7 +3,7 @@ TRUNCATE TABLE catalog_returns;
 
 
 COPY INTO catalog_returns
-FROM 'DATA_URL/catalog_returns.dat'
+FROM 'DATA_URL/catalog_returns/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

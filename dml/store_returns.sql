@@ -3,7 +3,7 @@ TRUNCATE TABLE store_returns;
 
 
 COPY INTO store_returns
-FROM 'DATA_URL/store_returns.dat'
+FROM 'DATA_URL/store_returns/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

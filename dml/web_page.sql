@@ -3,7 +3,7 @@ TRUNCATE TABLE web_page;
 
 
 COPY INTO web_page
-FROM 'DATA_URL/web_page.dat'
+FROM 'DATA_URL/web_page/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

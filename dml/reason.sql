@@ -3,7 +3,7 @@ TRUNCATE TABLE reason;
 
 
 COPY INTO reason
-FROM 'DATA_URL/reason.dat'
+FROM 'DATA_URL/reason/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

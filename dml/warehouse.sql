@@ -3,7 +3,7 @@ TRUNCATE TABLE warehouse;
 
 
 COPY INTO warehouse
-FROM 'DATA_URL/warehouse.dat'
+FROM 'DATA_URL/warehouse/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

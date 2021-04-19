@@ -3,7 +3,7 @@ TRUNCATE TABLE date_dim;
 
 
 COPY INTO date_dim
-FROM 'DATA_URL/date_dim.dat'
+FROM 'DATA_URL/date_dim/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

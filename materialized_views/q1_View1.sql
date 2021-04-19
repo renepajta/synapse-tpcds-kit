@@ -1,0 +1,13 @@
+CREATE MATERIALIZED VIEW q1_View1 WITH (DISTRIBUTION = HASH([Expr0])) AS
+SELECT  [DemoDW].[tpcds].[store_returns].[sr_customer_sk]    AS [Expr0]
+       ,[DemoDW].[tpcds].[store_returns].[sr_store_sk]       AS [Expr1]
+       ,[DemoDW].[tpcds].[date_dim].[d_year]                 AS [Expr2]
+       ,[DemoDW].[tpcds].[store_returns].[sr_fee]            AS [Expr3]
+       ,SUM([DemoDW].[tpcds].[store_returns].[sr_fee])       AS [Expr4]
+       ,COUNT_BIG([DemoDW].[tpcds].[store_returns].[sr_fee]) AS [Expr5]
+FROM [tpcds].[store_returns], [tpcds].[date_dim]
+WHERE [DemoDW].[tpcds].[store_returns].[sr_returned_date_sk]=[DemoDW].[tpcds].[date_dim].[d_date_sk] 
+GROUP BY  [DemoDW].[tpcds].[store_returns].[sr_customer_sk]
+         ,[DemoDW].[tpcds].[store_returns].[sr_store_sk]
+         ,[DemoDW].[tpcds].[date_dim].[d_year]
+         ,[DemoDW].[tpcds].[store_returns].[sr_fee]

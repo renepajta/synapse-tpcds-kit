@@ -3,7 +3,7 @@ TRUNCATE TABLE household_demographics;
 
 
 COPY INTO household_demographics
-FROM 'DATA_URL/household_demographics.dat'
+FROM 'DATA_URL/household_demographics/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

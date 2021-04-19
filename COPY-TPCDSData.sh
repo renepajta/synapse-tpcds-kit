@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# nohup ./COPY-TPCDSData.sh "synanalytics20pocwe.sql.azuresynapse.net" "DemoDW" "https://saanalytics20pocwe.dfs.core.windows.net/tpcds/SourceFiles1000GB_CSV" >status.out 2> status.err < /dev/null &
+# Environment variables
+# - SYNAPSE_USER
+# - SYNAPSE_USER_PWD
+
+# nohup ./COPY-TPCDSData.sh [SYNAPSE_URL] [DATABASE] [DATA_URL] >status.out 2> status.err < /dev/null &
 
 SYNAPSE_URL=$1
 DATABASE=$2
 DATA_URL=$3
-
-# Environment variables
-# - SYNAPSE_USER
-# - SYNAPSE_USER_PWD
 
 
 LOG_DIR=".logs/insert"

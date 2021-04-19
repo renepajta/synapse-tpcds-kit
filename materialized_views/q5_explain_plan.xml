@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dsql_query number_nodes="2" number_distributions="60" number_distributions_per_node="30">
+    <sql>with ssr as   (select s_store_id,          sum(sales_price) as sales,          sum(profit) as profit,          sum(return_amt) as returns,          sum(net_loss) as profit_loss   from    ( select  ss_store_sk as store_sk,              ss_sold_date_sk  as date_sk,              ss_ext_sales_price as sales_price,              ss_net_profit as profit,              cast(0 as decimal(7,2)) as return_amt,              cast(0 as decimal(7,2)) as net_loss      from store_sales      union all      select sr_store_sk as store_sk,             sr_returned_date_sk as date_sk,             cast(0 as decimal(7,2)) as sales_price,             cast(0 as decimal(7,2)) as profit,             sr_return_amt as return_amt,             sr_net_loss as net_loss      from store_returns     ) salesreturns,       date_dim,       store   where date_sk = d_date_sk         and d_date between cast('1998-08-04' as date)                     and dateadd(day, 14, cast('1998-08-04' as date))         and store_sk = s_store_sk   group by s_store_id)   ,   csr as   (select cp_catalog_page_id,          sum(sales_price) as sales,          sum(profit) as profit,          sum(return_amt) as returns,          sum(net_loss) as profit_loss   from    ( select  cs_catalog_page_sk as page_sk,              cs_sold_date_sk  as date_sk,              cs_ext_sales_price as sales_price,              cs_net_profit as profit,              cast(0 as decimal(7,2)) as return_amt,              cast(0 as decimal(7,2)) as net_loss      from catalog_sales      union all      select cr_catalog_page_sk as page_sk,             cr_returned_date_sk as date_sk,             cast(0 as decimal(7,2)) as sales_price,             cast(0 as decimal(7,2)) as profit,             cr_return_amount as return_amt,             cr_net_loss as net_loss      from catalog_returns     ) salesreturns,       date_dim,       catalog_page   where date_sk = d_date_sk         and d_date between cast('1998-08-04' as date)                    and dateadd(day, 14, cast('1998-08-04' as date))         and page_sk = cp_catalog_page_sk   group by cp_catalog_page_id)   ,   wsr as   (select web_site_id,          sum(sales_price) as sales,          sum(profit) as profit,          sum(return_amt) as returns,          sum(net_loss) as profit_loss   from    ( select  ws_web_site_sk as wsr_web_site_sk,              ws_sold_date_sk  as date_sk,              ws_ext_sales_price as sales_price,              ws_net_profit as profit,              cast(0 as decimal(7,2)) as return_amt,              cast(0 as decimal(7,2)) as net_loss      from web_sales      union all      select ws_web_site_sk as wsr_web_site_sk,             wr_returned_date_sk as date_sk,             cast(0 as decimal(7,2)) as sales_price,             cast(0 as decimal(7,2)) as profit,             wr_return_amt as return_amt,             wr_net_loss as net_loss      from web_returns left outer join web_sales on           ( wr_item_sk = ws_item_sk             and wr_order_number = ws_order_number)     ) salesreturns,       date_dim,       web_site   where date_sk = d_date_sk         and d_date between cast('1998-08-04' as date)                    and dateadd(day, 14, cast('1998-08-04' as date))         and wsr_web_site_sk = web_site_sk   group by web_site_id)    select top 100 channel          , id          , sum(sales) as sales          , sum(returns) as returns          , sum(profit) as profit   from    (select 'store channel' as channel          , isnull(s_store_id, 'store') as id          , sales          , returns          , (profit - profit_loss) as profit   from   ssr   union all   select 'catalog channel' as channel          , isnull(cp_catalog_page_id, 'catalog_page') as id          , sales          , returns          , (profit - profit_loss) as profit   from  csr   union all   select 'web channel' as channel          , isnull(web_site_id, 'web_site') as id          , sales          , returns          , (profit - profit_loss) as profit   from   wsr   ) x   group by rollup (channel, id)   order by channel           ,id</sql>
+    <dsql_operations total_cost="1.88964544" total_number_operations="20">
+        <dsql_operation operation_type="RND_ID">
+            <identifier>TEMP_ID_164</identifier>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">CREATE TABLE [qtabledb].[dbo].[TEMP_ID_164] ([s_store_id] CHAR(16) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, [col] DECIMAL(38, 2), [col1] DECIMAL(38, 2), [col2] DECIMAL(38, 2), [col3] DECIMAL(38, 2) ) WITH(DISTRIBUTED_MOVE_FILE='');</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="SHUFFLE_MOVE">
+            <operation_cost cost="0.01248" accumulative_cost="0.01248" average_rowsize="52" output_rows="15.8272" GroupNumber="228" />
+            <source_statement>SELECT [T1_1].[s_store_id] AS [s_store_id], [T1_1].[col] AS [col], [T1_1].[col1] AS [col1], [T1_1].[col2] AS [col2], [T1_1].[col3] AS [col3] FROM (SELECT SUM([T2_2].[ss_ext_sales_price]) AS [col], SUM([T2_2].[ss_net_profit]) AS [col1], SUM([T2_2].[col]) AS [col2], SUM([T2_2].[col1]) AS [col3], [T2_2].[s_store_id] AS [s_store_id] FROM (SELECT [T3_1].[d_date_sk] AS [d_date_sk] FROM [DemoDW].[tpcds].[date_dim] AS T3_1 WHERE (([T3_1].[d_date] &gt;= CAST ('08-04-1998' AS DATE)) AND ([T3_1].[d_date] &lt;= CAST ('08-18-1998' AS DATE)))) AS T2_1 INNER JOIN  (SELECT [T3_2].[ss_sold_date_sk] AS [ss_sold_date_sk], [T3_2].[ss_ext_sales_price] AS [ss_ext_sales_price], [T3_2].[ss_net_profit] AS [ss_net_profit], [T3_2].[col] AS [col], [T3_2].[col1] AS [col1], [T3_1].[s_store_id] AS [s_store_id] FROM [DemoDW].[tpcds].[store] AS T3_1 INNER JOIN  (SELECT [T5_1].[ss_store_sk] AS [ss_store_sk], [T5_1].[ss_sold_date_sk] AS [ss_sold_date_sk], [T5_1].[ss_ext_sales_price] AS [ss_ext_sales_price], [T5_1].[ss_net_profit] AS [ss_net_profit], [T5_1].[col] AS [col], [T5_1].[col1] AS [col1] FROM (SELECT CAST ((0.00) AS DECIMAL (7, 2)) AS [col], CAST ((0.00) AS DECIMAL (7, 2)) AS [col1], [T5_1].[ss_store_sk] AS [ss_store_sk], [T5_1].[ss_sold_date_sk] AS [ss_sold_date_sk], [T5_1].[ss_ext_sales_price] AS [ss_ext_sales_price], [T5_1].[ss_net_profit] AS [ss_net_profit] FROM [DemoDW].[tpcds].[store_sales] AS T5_1) AS T5_1  UNION ALL  SELECT [T5_1].[sr_store_sk] AS [sr_store_sk], [T5_1].[sr_returned_date_sk] AS [sr_returned_date_sk], [T5_1].[col] AS [col], [T5_1].[col1] AS [col1], [T5_1].[sr_return_amt] AS [sr_return_amt], [T5_1].[sr_net_loss] AS [sr_net_loss] FROM (SELECT CAST ((0.00) AS DECIMAL (7, 2)) AS [col], CAST ((0.00) AS DECIMAL (7, 2)) AS [col1], [T5_1].[sr_store_sk] AS [sr_store_sk], [T5_1].[sr_returned_date_sk] AS [sr_returned_date_sk], [T5_1].[sr_return_amt] AS [sr_return_amt], [T5_1].[sr_net_loss] AS [sr_net_loss] FROM [DemoDW].[tpcds].[store_returns] AS T5_1) AS T5_1) AS T3_2  ON ([T3_2].[ss_store_sk] = [T3_1].[s_store_sk])) AS T2_2  ON ([T2_2].[ss_sold_date_sk] = [T2_1].[d_date_sk]) GROUP BY [T2_2].[s_store_id]) AS T1_1  OPTION (MAXDOP 2, MIN_GRANT_PERCENT = [MIN_GRANT], DISTRIBUTED_MOVE(N''))</source_statement>
+            <destination_table>[TEMP_ID_164]</destination_table>
+            <shuffle_columns>s_store_id;</shuffle_columns>
+        </dsql_operation>
+        <dsql_operation operation_type="RND_ID">
+            <identifier>TEMP_ID_165</identifier>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">CREATE TABLE [qtabledb].[dbo].[TEMP_ID_165] ([cp_catalog_page_id] CHAR(16) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, [col] DECIMAL(38, 2), [col1] DECIMAL(38, 2), [col2] DECIMAL(38, 2), [col3] DECIMAL(38, 2) ) WITH(DISTRIBUTED_MOVE_FILE='');</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="SHUFFLE_MOVE">
+            <operation_cost cost="0.208" accumulative_cost="0.22048" average_rowsize="52" output_rows="500" GroupNumber="265" />
+            <source_statement>SELECT [T1_1].[cp_catalog_page_id] AS [cp_catalog_page_id], [T1_1].[col] AS [col], [T1_1].[col1] AS [col1], [T1_1].[col2] AS [col2], [T1_1].[col3] AS [col3] FROM (SELECT SUM([T2_2].[cs_ext_sales_price]) AS [col], SUM([T2_2].[cs_net_profit]) AS [col1], SUM([T2_2].[col]) AS [col2], SUM([T2_2].[col1]) AS [col3], [T2_2].[cp_catalog_page_id] AS [cp_catalog_page_id] FROM (SELECT [T3_1].[d_date_sk] AS [d_date_sk] FROM [DemoDW].[tpcds].[date_dim] AS T3_1 WHERE (([T3_1].[d_date] &gt;= CAST ('08-04-1998' AS DATE)) AND ([T3_1].[d_date] &lt;= CAST ('08-18-1998' AS DATE)))) AS T2_1 INNER JOIN  (SELECT [T3_2].[cs_sold_date_sk] AS [cs_sold_date_sk], [T3_2].[cs_ext_sales_price] AS [cs_ext_sales_price], [T3_2].[cs_net_profit] AS [cs_net_profit], [T3_2].[col] AS [col], [T3_2].[col1] AS [col1], [T3_1].[cp_catalog_page_id] AS [cp_catalog_page_id] FROM [DemoDW].[tpcds].[catalog_page] AS T3_1 INNER JOIN  (SELECT [T5_1].[cs_catalog_page_sk] AS [cs_catalog_page_sk], [T5_1].[cs_sold_date_sk] AS [cs_sold_date_sk], [T5_1].[cs_ext_sales_price] AS [cs_ext_sales_price], [T5_1].[cs_net_profit] AS [cs_net_profit], [T5_1].[col] AS [col], [T5_1].[col1] AS [col1] FROM (SELECT CAST ((0.00) AS DECIMAL (7, 2)) AS [col], CAST ((0.00) AS DECIMAL (7, 2)) AS [col1], [T5_1].[cs_catalog_page_sk] AS [cs_catalog_page_sk], [T5_1].[cs_sold_date_sk] AS [cs_sold_date_sk], [T5_1].[cs_ext_sales_price] AS [cs_ext_sales_price], [T5_1].[cs_net_profit] AS [cs_net_profit] FROM [DemoDW].[tpcds].[catalog_sales] AS T5_1) AS T5_1  UNION ALL  SELECT [T5_1].[cr_catalog_page_sk] AS [cr_catalog_page_sk], [T5_1].[cr_returned_date_sk] AS [cr_returned_date_sk], [T5_1].[col] AS [col], [T5_1].[col1] AS [col1], [T5_1].[cr_return_amount] AS [cr_return_amount], [T5_1].[cr_net_loss] AS [cr_net_loss] FROM (SELECT CAST ((0.00) AS DECIMAL (7, 2)) AS [col], CAST ((0.00) AS DECIMAL (7, 2)) AS [col1], [T5_1].[cr_catalog_page_sk] AS [cr_catalog_page_sk], [T5_1].[cr_returned_date_sk] AS [cr_returned_date_sk], [T5_1].[cr_return_amount] AS [cr_return_amount], [T5_1].[cr_net_loss] AS [cr_net_loss] FROM [DemoDW].[tpcds].[catalog_returns] AS T5_1) AS T5_1) AS T3_2  ON ([T3_2].[cs_catalog_page_sk] = [T3_1].[cp_catalog_page_sk])) AS T2_2  ON ([T2_2].[cs_sold_date_sk] = [T2_1].[d_date_sk]) GROUP BY [T2_2].[cp_catalog_page_id]) AS T1_1  OPTION (MAXDOP 2, MIN_GRANT_PERCENT = [MIN_GRANT], DISTRIBUTED_MOVE(N''))</source_statement>
+            <destination_table>[TEMP_ID_165]</destination_table>
+            <shuffle_columns>cp_catalog_page_id;</shuffle_columns>
+        </dsql_operation>
+        <dsql_operation operation_type="RND_ID">
+            <identifier>TEMP_ID_166</identifier>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">CREATE TABLE [qtabledb].[dbo].[TEMP_ID_166] ([web_site_id] CHAR(16) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, [col] DECIMAL(38, 2), [col1] DECIMAL(38, 2), [col2] DECIMAL(38, 2), [col3] DECIMAL(38, 2) ) WITH(DISTRIBUTED_MOVE_FILE='');</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="SHUFFLE_MOVE">
+            <operation_cost cost="0.01248" accumulative_cost="0.23296" average_rowsize="52" output_rows="15.8114" GroupNumber="303" />
+            <source_statement>SELECT [T1_1].[web_site_id] AS [web_site_id], [T1_1].[col] AS [col], [T1_1].[col1] AS [col1], [T1_1].[col2] AS [col2], [T1_1].[col3] AS [col3] FROM (SELECT SUM([T2_2].[ws_ext_sales_price]) AS [col], SUM([T2_2].[ws_net_profit]) AS [col1], SUM([T2_2].[col]) AS [col2], SUM([T2_2].[col1]) AS [col3], [T2_2].[web_site_id] AS [web_site_id] FROM (SELECT [T3_1].[d_date_sk] AS [d_date_sk] FROM [DemoDW].[tpcds].[date_dim] AS T3_1 WHERE (([T3_1].[d_date] &gt;= CAST ('08-04-1998' AS DATE)) AND ([T3_1].[d_date] &lt;= CAST ('08-18-1998' AS DATE)))) AS T2_1 INNER JOIN  (SELECT [T3_2].[ws_sold_date_sk] AS [ws_sold_date_sk], [T3_2].[ws_ext_sales_price] AS [ws_ext_sales_price], [T3_2].[ws_net_profit] AS [ws_net_profit], [T3_2].[col] AS [col], [T3_2].[col1] AS [col1], [T3_1].[web_site_id] AS [web_site_id] FROM [DemoDW].[tpcds].[web_site] AS T3_1 INNER JOIN  (SELECT [T5_1].[ws_web_site_sk] AS [ws_web_site_sk], [T5_1].[ws_sold_date_sk] AS [ws_sold_date_sk], [T5_1].[ws_ext_sales_price] AS [ws_ext_sales_price], [T5_1].[ws_net_profit] AS [ws_net_profit], [T5_1].[col] AS [col], [T5_1].[col1] AS [col1] FROM (SELECT CAST ((0.00) AS DECIMAL (7, 2)) AS [col], CAST ((0.00) AS DECIMAL (7, 2)) AS [col1], [T5_1].[ws_web_site_sk] AS [ws_web_site_sk], [T5_1].[ws_sold_date_sk] AS [ws_sold_date_sk], [T5_1].[ws_ext_sales_price] AS [ws_ext_sales_price], [T5_1].[ws_net_profit] AS [ws_net_profit] FROM [DemoDW].[tpcds].[web_sales] AS T5_1) AS T5_1  UNION ALL  SELECT [T5_1].[ws_web_site_sk] AS [ws_web_site_sk], [T5_1].[wr_returned_date_sk] AS [wr_returned_date_sk], [T5_1].[col] AS [col], [T5_1].[col1] AS [col1], [T5_1].[wr_return_amt] AS [wr_return_amt], [T5_1].[wr_net_loss] AS [wr_net_loss] FROM (SELECT CAST ((0.00) AS DECIMAL (7, 2)) AS [col], CAST ((0.00) AS DECIMAL (7, 2)) AS [col1], [T5_1].[ws_web_site_sk] AS [ws_web_site_sk], [T5_2].[wr_returned_date_sk] AS [wr_returned_date_sk], [T5_2].[wr_return_amt] AS [wr_return_amt], [T5_2].[wr_net_loss] AS [wr_net_loss] FROM (SELECT [T6_1].[ws_item_sk] AS [ws_item_sk], [T6_1].[ws_order_number] AS [ws_order_number], [T6_1].[ws_web_site_sk] AS [ws_web_site_sk] FROM [DemoDW].[tpcds].[web_sales] AS T6_1 WHERE ([T6_1].[ws_web_site_sk] IS NOT NULL)) AS T5_1 INNER JOIN  (SELECT [T6_1].[wr_item_sk] AS [wr_item_sk], [T6_1].[wr_order_number] AS [wr_order_number], [T6_1].[wr_returned_date_sk] AS [wr_returned_date_sk], [T6_1].[wr_return_amt] AS [wr_return_amt], [T6_1].[wr_net_loss] AS [wr_net_loss] FROM [DemoDW].[tpcds].[web_returns] AS T6_1 WHERE ([T6_1].[wr_returned_date_sk] IS NOT NULL)) AS T5_2  ON (([T5_2].[wr_item_sk] = [T5_1].[ws_item_sk]) AND ([T5_2].[wr_order_number] = [T5_1].[ws_order_number]))) AS T5_1) AS T3_2  ON ([T3_2].[ws_web_site_sk] = [T3_1].[web_site_sk])) AS T2_2  ON ([T2_2].[ws_sold_date_sk] = [T2_1].[d_date_sk]) GROUP BY [T2_2].[web_site_id]) AS T1_1  OPTION (MAXDOP 2, MIN_GRANT_PERCENT = [MIN_GRANT], DISTRIBUTED_MOVE(N''))</source_statement>
+            <destination_table>[TEMP_ID_166]</destination_table>
+            <shuffle_columns>web_site_id;</shuffle_columns>
+        </dsql_operation>
+        <dsql_operation operation_type="RND_ID">
+            <identifier>TEMP_ID_167</identifier>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">CREATE TABLE [qtabledb].[dbo].[TEMP_ID_167] ([col] VARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS, [s_store_id] CHAR(16) COLLATE SQL_Latin1_General_CP1_CI_AS, [col1] DECIMAL(38, 2), [col2] DECIMAL(38, 2), [col3] DECIMAL(38, 2), [col4] INT ) WITH(DISTRIBUTED_MOVE_FILE='');</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="SHUFFLE_MOVE">
+            <operation_cost cost="0.26468544" accumulative_cost="0.49764544" average_rowsize="62" output_rows="533.64" GroupNumber="605" />
+            <source_statement>SELECT [T1_1].[col4] AS [col], [T1_1].[s_store_id] AS [s_store_id], [T1_1].[col] AS [col1], [T1_1].[col1] AS [col2], [T1_1].[col2] AS [col3], [T1_1].[col3] AS [col4] FROM (SELECT SUM([T2_1].[col1]) AS [col], SUM([T2_1].[col2]) AS [col1], SUM([T2_1].[col3]) AS [col2], GROUPING_ID([T2_1].[s_store_id], [T2_1].[col]) AS [col3], [T2_1].[col] AS [col4], [T2_1].[s_store_id] AS [s_store_id] FROM (SELECT [T5_1].[col] AS [col], [T5_1].[s_store_id] AS [s_store_id], [T5_1].[col2] AS [col1], [T5_1].[col3] AS [col2], [T5_1].[col1] AS [col3] FROM (SELECT CAST (N'store channel' COLLATE SQL_Latin1_General_CP1_CI_AS AS VARCHAR (13)) COLLATE SQL_Latin1_General_CP1_CI_AS AS [col], [T5_1].[s_store_id] AS [s_store_id], ([T5_1].[col1] - [T5_1].[col3]) AS [col1], [T5_1].[col] AS [col2], [T5_1].[col2] AS [col3] FROM (SELECT SUM([T6_1].[col]) AS [col], SUM([T6_1].[col1]) AS [col1], SUM([T6_1].[col2]) AS [col2], SUM([T6_1].[col3]) AS [col3], [T6_1].[s_store_id] AS [s_store_id] FROM [qtabledb].[dbo].[TEMP_ID_164] AS T6_1 GROUP BY [T6_1].[s_store_id]) AS T5_1) AS T5_1  UNION ALL  SELECT [T5_1].[col] AS [col], [T5_1].[cp_catalog_page_id] AS [cp_catalog_page_id], [T5_1].[col2] AS [col1], [T5_1].[col3] AS [col2], [T5_1].[col1] AS [col3] FROM (SELECT CAST (N'catalog channel' COLLATE SQL_Latin1_General_CP1_CI_AS AS VARCHAR (15)) COLLATE SQL_Latin1_General_CP1_CI_AS AS [col], [T5_1].[cp_catalog_page_id] AS [cp_catalog_page_id], ([T5_1].[col1] - [T5_1].[col3]) AS [col1], [T5_1].[col] AS [col2], [T5_1].[col2] AS [col3] FROM (SELECT SUM([T6_1].[col]) AS [col], SUM([T6_1].[col1]) AS [col1], SUM([T6_1].[col2]) AS [col2], SUM([T6_1].[col3]) AS [col3], [T6_1].[cp_catalog_page_id] AS [cp_catalog_page_id] FROM [qtabledb].[dbo].[TEMP_ID_165] AS T6_1 GROUP BY [T6_1].[cp_catalog_page_id]) AS T5_1) AS T5_1  UNION ALL  SELECT [T4_1].[col] AS [col], [T4_1].[web_site_id] AS [web_site_id], [T4_1].[col2] AS [col1], [T4_1].[col3] AS [col2], [T4_1].[col1] AS [col3] FROM (SELECT CAST (N'web channel' COLLATE SQL_Latin1_General_CP1_CI_AS AS VARCHAR (11)) COLLATE SQL_Latin1_General_CP1_CI_AS AS [col], [T4_1].[web_site_id] AS [web_site_id], ([T4_1].[col1] - [T4_1].[col3]) AS [col1], [T4_1].[col] AS [col2], [T4_1].[col2] AS [col3] FROM (SELECT SUM([T5_1].[col]) AS [col], SUM([T5_1].[col1]) AS [col1], SUM([T5_1].[col2]) AS [col2], SUM([T5_1].[col3]) AS [col3], [T5_1].[web_site_id] AS [web_site_id] FROM [qtabledb].[dbo].[TEMP_ID_166] AS T5_1 GROUP BY [T5_1].[web_site_id]) AS T4_1) AS T4_1) AS T2_1 GROUP BY GROUPING SETS((), ([T2_1].[col]), ([T2_1].[col], [T2_1].[s_store_id]))) AS T1_1  OPTION (MAXDOP 2, MIN_GRANT_PERCENT = [MIN_GRANT], DISTRIBUTED_MOVE(N''))</source_statement>
+            <destination_table>[TEMP_ID_167]</destination_table>
+            <shuffle_columns>s_store_id;</shuffle_columns>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="Control" />
+            <sql_operations>
+                <sql_operation type="statement">CREATE TABLE [tempdb].[QTables].[QTable_dc20200cd98e465bacf8af0b6eccc8df] ([col] VARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS, [s_store_id] CHAR(16) COLLATE SQL_Latin1_General_CP1_CI_AS, [col1] DECIMAL(38, 2), [col2] DECIMAL(38, 2), [col3] DECIMAL(38, 2) ) WITH(DISTRIBUTED_MOVE_FILE='');</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="PARTITION_MOVE">
+            <operation_cost cost="1.392" accumulative_cost="1.88964544" average_rowsize="58" output_rows="100" GroupNumber="365" />
+            <location distribution="AllDistributions" />
+            <source_statement>SELECT [T1_1].[col3] AS [col], [T1_1].[s_store_id] AS [s_store_id], [T1_1].[col] AS [col1], [T1_1].[col1] AS [col2], [T1_1].[col2] AS [col3] FROM (SELECT TOP (CAST ((100) AS BIGINT)) SUM([T2_1].[col1]) AS [col], SUM([T2_1].[col2]) AS [col1], SUM([T2_1].[col3]) AS [col2], [T2_1].[col] AS [col3], [T2_1].[s_store_id] AS [s_store_id] FROM [qtabledb].[dbo].[TEMP_ID_167] AS T2_1 GROUP BY [T2_1].[col], [T2_1].[s_store_id], [T2_1].[col4] ORDER BY [T2_1].[col] ASC, [T2_1].[s_store_id] ASC) AS T1_1  OPTION (MAXDOP 2, MIN_GRANT_PERCENT = [MIN_GRANT], DISTRIBUTED_MOVE(N''))</source_statement>
+            <destination>Control</destination>
+            <destination_table>[QTable_dc20200cd98e465bacf8af0b6eccc8df]</destination_table>
+        </dsql_operation>
+        <dsql_operation operation_type="RETURN">
+            <location distribution="Control" />
+            <select>SELECT [T1_1].[col] AS [col], [T1_1].[s_store_id] AS [s_store_id], [T1_1].[col1] AS [col1], [T1_1].[col2] AS [col2], [T1_1].[col3] AS [col3] FROM (SELECT TOP (CAST ((100) AS BIGINT)) [T2_1].[col] AS [col], [T2_1].[s_store_id] AS [s_store_id], [T2_1].[col1] AS [col1], [T2_1].[col2] AS [col2], [T2_1].[col3] AS [col3] FROM [tempdb].[QTables].[QTable_dc20200cd98e465bacf8af0b6eccc8df] AS T2_1 ORDER BY [T2_1].[col] ASC, [T2_1].[s_store_id] ASC) AS T1_1 ORDER BY [T1_1].[col] ASC, [T1_1].[s_store_id] ASC  OPTION (MAXDOP 2, MIN_GRANT_PERCENT = [MIN_GRANT])</select>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="Control" />
+            <sql_operations>
+                <sql_operation type="statement">DROP TABLE [tempdb].[QTables].[QTable_dc20200cd98e465bacf8af0b6eccc8df]</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">DROP TABLE [qtabledb].[dbo].[TEMP_ID_166]</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">DROP TABLE [qtabledb].[dbo].[TEMP_ID_165]</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">DROP TABLE [qtabledb].[dbo].[TEMP_ID_164]</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+        <dsql_operation operation_type="ON">
+            <location permanent="false" distribution="AllDistributions" />
+            <sql_operations>
+                <sql_operation type="statement">DROP TABLE [qtabledb].[dbo].[TEMP_ID_167]</sql_operation>
+            </sql_operations>
+        </dsql_operation>
+    </dsql_operations>
+</dsql_query>

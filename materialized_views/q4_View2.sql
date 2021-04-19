@@ -1,0 +1,22 @@
+CREATE MATERIALIZED VIEW q4_View2 WITH (DISTRIBUTION = HASH([Expr0])) AS
+SELECT  [DemoDW].[tpcds].[customer].[c_customer_id]         AS [Expr0]
+       ,[DemoDW].[tpcds].[customer].[c_first_name]          AS [Expr1]
+       ,[DemoDW].[tpcds].[customer].[c_last_name]           AS [Expr2]
+       ,[DemoDW].[tpcds].[customer].[c_preferred_cust_flag] AS [Expr3]
+       ,[DemoDW].[tpcds].[customer].[c_birth_country]       AS [Expr4]
+       ,[DemoDW].[tpcds].[customer].[c_login]               AS [Expr5]
+       ,[DemoDW].[tpcds].[customer].[c_email_address]       AS [Expr6]
+       ,[DemoDW].[tpcds].[date_dim].[d_year]                AS [Expr7]
+       ,SUM(([DemoDW].[tpcds].[catalog_sales].[cs_ext_list_price]-[DemoDW].[tpcds].[catalog_sales].[cs_ext_wholesale_cost]-[DemoDW].[tpcds].[catalog_sales].[cs_ext_discount_amt]+[DemoDW].[tpcds].[catalog_sales].[cs_ext_sales_price])/(2.)) AS [Expr8]
+       ,COUNT_BIG(([DemoDW].[tpcds].[catalog_sales].[cs_ext_list_price]-[DemoDW].[tpcds].[catalog_sales].[cs_ext_wholesale_cost]-[DemoDW].[tpcds].[catalog_sales].[cs_ext_discount_amt]+[DemoDW].[tpcds].[catalog_sales].[cs_ext_sales_price])/(2.)) AS [Expr9]
+FROM [tpcds].[catalog_sales], [tpcds].[customer], [tpcds].[date_dim]
+WHERE ([DemoDW].[tpcds].[catalog_sales].[cs_sold_date_sk]=[DemoDW].[tpcds].[date_dim].[d_date_sk]) 
+AND ([DemoDW].[tpcds].[customer].[c_customer_sk]=[DemoDW].[tpcds].[catalog_sales].[cs_bill_customer_sk]) 
+GROUP BY  [DemoDW].[tpcds].[customer].[c_customer_id]
+         ,[DemoDW].[tpcds].[customer].[c_first_name]
+         ,[DemoDW].[tpcds].[customer].[c_last_name]
+         ,[DemoDW].[tpcds].[customer].[c_preferred_cust_flag]
+         ,[DemoDW].[tpcds].[customer].[c_birth_country]
+         ,[DemoDW].[tpcds].[customer].[c_login]
+         ,[DemoDW].[tpcds].[customer].[c_email_address]
+         ,[DemoDW].[tpcds].[date_dim].[d_year]

@@ -29,16 +29,17 @@
 #     $3 - ADLS Gen 2 Container name
 #     $4 - ADLS Gen 2 directory - Location where data will be uploaded in
 #          storage account
+#     $5 - Number of files generated per table
 
 #-------------------------------------------------------------------------------
 
 set -e
-# PARALLEL=$1
-# CHILD=$2
+
 SCALE_FACTOR=$1
 TMP_DIR=$2
 CONTAINER_NAME=$3
 DATA_DIR=$4
+PARALLEL=$5
 
 cd tools
 
@@ -46,17 +47,20 @@ for table in $(cat ../build_data_for_tables.txt); do
 
     table_name=$(echo ${table} | awk -F '|' '{print $1}')
 
-    # ./dsdgen -table ${table_name} -scale ${SCALE_FACTOR} -dir ${TMP_DIR} -parallel ${PARALLEL} -child ${CHILD} -terminate n -force
-    ./dsdgen -table ${table_name} -scale ${SCALE_FACTOR} -dir ${TMP_DIR} -terminate n -force
+    for CHILD in {1..${PARALLEL}}: do echo
+
+
+    ./dsdgen -table ${table_name} -scale ${SCALE_FACTOR} -dir ${TMP_DIR} -parallel ${PARALLEL} -child ${CHILD} -terminate n -force
+    # ./dsdgen -table ${table_name} -scale ${SCALE_FACTOR} -dir ${TMP_DIR} -terminate n -force
 
     # Move each file produced to ADLS Gen2
     #   - Leave any 'customer' files as they need a character set fix and can't do it in HDFS.
     #     These files will be fixed and moved to ADLS later.
 
-    if [ -f ${TMP_DIR}/${table_name}.dat ]; then
+    if [ -f ${TMP_DIR}/${table_name}_${PARALLEL}_${CHILD}.dat ]; then
 
-        az storage blob upload --account-name ${ACCOUNT_NAME} --account-key ${ACCOUNT_KEY} -f ${TMP_DIR}/${table_name}.dat -c ${CONTAINER_NAME} -n ${DATA_DIR}/${table_name}.dat
-        rm -f ${TMP_DIR}/${table_name}.dat
+        az storage blob upload --account-name ${ACCOUNT_NAME} --account-key ${ACCOUNT_KEY} -f ${TMP_DIR}/${table_name}_${PARALLEL}_${CHILD}.dat -c ${CONTAINER_NAME} -n ${DATA_DIR}/${table_name}/${PARALLEL}_${CHILD}.dat
+        rm -f ${TMP_DIR}/${table_name}_${PARALLEL}_${CHILD}.dat
 
         # dsdgen is not called explictly to create returns. These are created alongside
         # the sales. Hence, unavoidable hard coding here to copy to HDFS.
@@ -65,16 +69,22 @@ for table in $(cat ../build_data_for_tables.txt); do
         if [ "${table_name}" == "catalog_sales" -o "${table_name}" == "store_sales" -o "${table_name}" == "web_sales" ]; then
 
             table_name_ret=$(echo ${table_name} | sed 's/sales/returns/')
-            az storage blob upload --account-name ${ACCOUNT_NAME} --account-key ${ACCOUNT_KEY} -f ${TMP_DIR}/${table_name_ret}.dat -c ${CONTAINER_NAME} -n ${DATA_DIR}/${table_name_ret}.dat
-            rm -f ${TMP_DIR}/${table_name_ret}.dat
+            az storage blob upload --account-name ${ACCOUNT_NAME} --account-key ${ACCOUNT_KEY} -f ${TMP_DIR}/${table_name_ret}_${PARALLEL}_${CHILD}.dat -c ${CONTAINER_NAME} -n ${DATA_DIR}/${table_name_ret}/${PARALLEL}_${CHILD}.dat
+            rm -f ${TMP_DIR}/${table_name_ret}_${PARALLEL}_${CHILD}.dat
 
         fi
     fi
 
+    echo "COMPLETE: ${table_name}: ${CHILD} out of ${PARALLEL}"
+
+    done
+
+    echo "COMPLETE: ${table_name}"
+
 done
 
 # echo "COMPLETE: dsdgen parallel ${PARALLEL} child ${CHILD} scale ${SCALE_FACTOR}"
-echo "COMPLETE: dsdgen scale ${SCALE_FACTOR}"
+echo "COMPLETE: dsdgen scale ${SCALE_FACTOR} parallel ${PARALLEL}"
 #------------------------------------------------------------------------------#
 #---------------------------- End of Shell Script -----------------------------#
 #------------------------------------------------------------------------------#

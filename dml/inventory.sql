@@ -3,7 +3,7 @@ TRUNCATE TABLE inventory;
 
 
 COPY INTO inventory
-FROM 'DATA_URL/inventory.dat'
+FROM 'DATA_URL/inventory/*.dat'
 WITH (
        FILE_TYPE = 'CSV'
        ,CREDENTIAL = (IDENTITY = 'Managed Identity')

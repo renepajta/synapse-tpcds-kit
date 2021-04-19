@@ -49,11 +49,12 @@ make OS=LINUX
 
 ### Data generation
 
-Data generation is done via `Generate-TPCDSData.sh [SCALE_FACTOR] [TMP_DIR] [CONTAINER_NAME] [DATA_DIR]`.
+Data generation is done via `Generate-TPCDSData.sh [SCALE_FACTOR] [TMP_DIR] [CONTAINER_NAME] [DATA_DIR] [PARALLEL]`.
 * `SCALE_FACTOR` - Scale Factor - The size of the data to be generated in Gigabytes, e.g. 1 = 1Gb
 * `TMP_DIR` - Temporary directory - The generated data will be stored here before uploaded to ADLS Gen 2
 * `CONTAINER_NAME` - ADLS Gen 2 Container name
 * `DATA_DIR` - ADLS Gen 2 directory - Location where data will be uploaded in storage account
+* `PARALLEL` - Number of files generated per table, minimum 2.
 
 Following environmental variables need to be set
 * `ACCOUNT_NAME` - ADLS Gen 2 account name 
