@@ -3,13 +3,13 @@
 #-------------------------------------------------------------------------------
 
 # Copyright 2015 Actian Corporation
- 
+
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
- 
+
 # http://www.apache.org/licenses/LICENSE-2.0
- 
+
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -40,7 +40,6 @@ SCALE_FACTOR=$1
 SYNAPSE_URL=$2
 DATABASE=$3
 
-
 SQL_DIR="../.scripts"
 QUERY_DIR="../query_templates"
 LOG_DIR="../.logs"
@@ -51,6 +50,11 @@ echo "Step 0 - Clean-up"
 echo ""
 
 cd tools
+
+if [ ! -d $SQL_DIR ]; then
+    mkdir $SQL_DIR
+fi
+
 rm -fr ${LOG_DIR}/*
 rm -fr ${SQL_DIR}/*
 
@@ -62,7 +66,7 @@ echo ""
 
 for template_file in $(cat ${QUERY_DIR}/templates.lst); do
 
-    template_name=`echo ${template_file} | awk -F '.' '{print $1}'`   
+    template_name=$(echo ${template_file} | awk -F '.' '{print $1}')
 
     ./dsqgen -template ${template_file} -directory ${QUERY_DIR} -output ${SQL_DIR} -dialect sqlserver -scale ${SCALE_FACTOR} -quiet Y
 
@@ -70,39 +74,45 @@ for template_file in $(cat ${QUERY_DIR}/templates.lst); do
 
 done
 
-echo "TPC DS Style SQL Performance Test Results" > ${LOG_FILE}
-echo "-----------------------------------------" >> ${LOG_FILE}
-echo ""                                          >> ${LOG_FILE}
-echo "Run time in seconds"                       >> ${LOG_FILE}
-echo ""                                          >> ${LOG_FILE}
+echo "TPC DS Style SQL Performance Test Results" >${LOG_FILE}
+echo "-----------------------------------------" >>${LOG_FILE}
+echo "" >>${LOG_FILE}
+echo "Run time in seconds" >>${LOG_FILE}
+echo "" >>${LOG_FILE}
 
 for sql_file in $(ls ${PWD}/${SQL_DIR}/*.sql); do
 
     # Extract the SQL name and no. for the Summary print
-    sql_name=`echo ${sql_file} | awk -F 'scripts/' '{print $2}' | awk -F '.' '{print $1}'`
-    sql_no=`echo ${sql_file} | awk -F 'scripts/' '{print $2}' | awk -F '.' '{print $1}' | sed 's/Query//'`
+    sql_name=$(echo ${sql_file} | awk -F 'scripts/' '{print $2}' | awk -F '.' '{print $1}')
+    sql_no=$(echo ${sql_file} | awk -F 'scripts/' '{print $2}' | awk -F '.' '{print $1}' | sed 's/Query//')
 
     echo "Running SQL Test ${sql_name}."
 
-    # Note time at start of run
-    Start_Time="$(date +%s%N)"
+    sql_to_run=$(
+        cat ${sql_file}
+        echo "\g"
+    )
 
-    # Run the SQL
-    sql_to_run=`cat ${sql_file}; echo "\g"`
+    for run in {1..5}; do
 
-    sqlcmd -S ${SYNAPSE_URL} -d ${DATABASE} -U ${SYNAPSE_USER} -P ${SYNAPSE_USER_PWD} -I > ${LOG_DIR}/TPC_DS_${sql_name}_Results.out <<EOF
+        # Note time at start of run
+        Start_Time="$(date +%s%N)"
+
+        sqlcmd -S ${SYNAPSE_URL} -d ${DATABASE} -U ${SYNAPSE_USER} -P ${SYNAPSE_USER_PWD} -I >${LOG_DIR}/TPC_DS_${sql_name}_Results.out <<EOF
 ${sql_to_run}
 EOF
 
-    # Time at end of run and hence calculate duration
-    Run_Time="$(($(date +%s%N)-${Start_Time}))"
+        # Time at end of run and hence calculate duration
+        Run_Time="$(($(date +%s%N) - ${Start_Time}))"
 
-    # Log the results - run time or FAILED
-    if [ `grep "^E_US" ${LOG_DIR}/TPC_DS_${sql_name}_Results.out | wc -l` -gt 0 ]; then
-        printf "${sql_name} : FAILED\n" >> ${LOG_FILE}
-    else
-        printf "${sql_name} : %5.2f\n" `bc <<< "scale = 2; (${Run_Time} / 1000000000)"` >> ${LOG_FILE}
-    fi
+        # Log the results - run time or FAILED
+        if [ $(grep "^E_US" ${LOG_DIR}/TPC_DS_${sql_name}_Results.out | wc -l) -gt 0 ]; then
+            printf "${sql_name} : FAILED\n" >>${LOG_FILE}
+        else
+            printf "${sql_name} : ${run} : %5.2f\n" $(bc <<<"scale = 2; (${Run_Time} / 1000000000)") >>${LOG_FILE}
+        fi
+
+    done
 
 done
 
