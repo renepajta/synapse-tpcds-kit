@@ -33,7 +33,7 @@ CREATE TABLE [web_returns]
 )
 WITH
 (
-	DISTRIBUTION = HASH ( [wr_returned_date_sk] ),
-	CLUSTERED COLUMNSTORE INDEX
+	DISTRIBUTION = HASH ( [wr_item_sk] ),
+	CLUSTERED COLUMNSTORE INDEX ORDER(wr_returned_date_sk, wr_item_sk)
 )
 GO

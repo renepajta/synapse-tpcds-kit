@@ -29,7 +29,7 @@ CREATE TABLE [store_returns]
 )
 WITH
 (
-	DISTRIBUTION = HASH ( [sr_returned_date_sk] ),
-	CLUSTERED COLUMNSTORE INDEX
+	DISTRIBUTION = HASH ( [sr_item_sk] ),
+	CLUSTERED COLUMNSTORE INDEX ORDER([sr_returned_date_sk], [sr_item_sk])
 )
 GO

@@ -43,7 +43,7 @@ CREATE TABLE [web_sales]
 )
 WITH
 (
-	DISTRIBUTION = HASH ( [ws_sold_date_sk] ),
-	CLUSTERED COLUMNSTORE INDEX
+	DISTRIBUTION = HASH ( [ws_item_sk] ),
+	CLUSTERED COLUMNSTORE INDEX ORDER(ws_sold_date_sk, ws_item_sk)
 )
 GO

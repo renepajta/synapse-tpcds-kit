@@ -36,7 +36,7 @@ CREATE TABLE [catalog_returns]
 )
 WITH
 (
-	DISTRIBUTION = HASH ( [cr_returned_date_sk] ),
-	CLUSTERED COLUMNSTORE INDEX
+	DISTRIBUTION = HASH ( [cr_item_sk] ),
+	CLUSTERED COLUMNSTORE INDEX ORDER ([cr_returned_date_sk], [cr_item_sk])
 )
 GO

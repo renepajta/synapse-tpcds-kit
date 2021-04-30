@@ -13,7 +13,7 @@ CREATE TABLE [inventory]
 )
 WITH
 (
-	DISTRIBUTION = HASH(inv_date_sk),
-	CLUSTERED COLUMNSTORE INDEX
+	DISTRIBUTION = HASH(inv_item_sk),
+	CLUSTERED COLUMNSTORE INDEX ORDER ([inv_date_sk], [inv_item_sk])
 )
 GO
