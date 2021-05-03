@@ -1,0 +1,12 @@
+{
+    "jmeterPath": "C:\\apache-jmeter-5.4.1\\bin\\jmeter.bat",
+    "ConnectionStrings": {
+        "DatabricksConnectionString": "", 
+        "SQLAnalyticsConnectionString": "",
+        "SynapseConnectionString": ""
+    },
+    "DatabricksDatabaseName": "dataset_10tb",
+    "NumberOfQueries": 99,
+    "RepeatQueryCount": 3,
+    "ResultsDirectory": "C:\\Users\\repajta\\Documents\\MyRepos\\synapse-tpcds-kit\\jmeter\\results"
+}
