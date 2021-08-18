@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1620205022586,15969,query2-1,200,OK,1 User: Azure Databricks 1-1,text,true,,100784,0,1,1,null,15687,0,3733
+1620205038558,9198,query2-2,200,OK,1 User: Azure Databricks 1-1,text,true,,100784,0,1,1,null,8978,0,0
+1620205047758,9437,query2-3,200,OK,1 User: Azure Databricks 1-1,text,true,,100784,0,1,1,null,9167,0,0

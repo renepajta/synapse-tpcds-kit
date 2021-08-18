@@ -4,6 +4,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+drop table store_returns;
 CREATE TABLE [store_returns]
 (
 	[sr_returned_date_sk] [int] NULL,
@@ -15,7 +16,7 @@ CREATE TABLE [store_returns]
 	[sr_addr_sk] [int] NULL,
 	[sr_store_sk] [int] NULL,
 	[sr_reason_sk] [int] NULL,
-	[sr_ticket_number] [int] NOT NULL,
+	[sr_ticket_number] [bigint] NOT NULL,
 	[sr_return_quantity] [int] NULL,
 	[sr_return_amt] [decimal](7, 2) NULL,
 	[sr_return_tax] [decimal](7, 2) NULL,

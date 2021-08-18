@@ -1,0 +1,121 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1623412133638,63444,query2-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,170903,0,1,1,null,62816,0,1847
+1623412197086,249,query2-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,170903,0,1,1,null,185,0,0
+1623412197337,200,query2-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,170903,0,1,1,null,145,0,0
+1623412197539,28992,query7-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,5106,0,1,1,null,28990,0,0
+1623412226533,166,query7-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,5106,0,1,1,null,165,0,0
+1623412226700,152,query7-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,5106,0,1,1,null,151,0,0
+1623412226855,37190,query13-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,43,0,1,1,null,37190,0,0
+1623412264050,197,query13-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,43,0,1,1,null,197,0,0
+1623412264248,183,query13-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,43,0,1,1,null,183,0,0
+1623412264433,16813,query15-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,1951,0,1,1,null,16812,0,0
+1623412281246,145,query15-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,1951,0,1,1,null,144,0,0
+1623412281395,138,query15-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,1951,0,1,1,null,137,0,0
+1623412281534,14235,query26-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,5151,0,1,1,null,14235,0,0
+1623412295773,168,query26-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,5151,0,1,1,null,167,0,0
+1623412295943,157,query26-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,5151,0,1,1,null,156,0,0
+1623412296103,125339,query31-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,16765,0,1,1,null,123606,0,0
+1623412421443,299,query31-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,16765,0,1,1,null,296,0,0
+1623412421744,284,query31-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,16765,0,1,1,null,279,0,0
+1623412422029,25569,query33-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,1607,0,1,1,null,25569,0,0
+1623412447599,198,query33-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,1607,0,1,1,null,197,0,1
+1623412447799,179,query33-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,1607,0,1,1,null,179,0,0
+1623412447981,13127,query42-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,793,0,1,1,null,13126,0,0
+1623412461109,122,query42-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,793,0,1,1,null,121,0,0
+1623412461232,108,query42-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,793,0,1,1,null,107,0,0
+1623412461343,13133,query48-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,10,0,1,1,null,13133,0,0
+1623412474479,154,query48-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,10,0,1,1,null,154,0,0
+1623412474635,143,query48-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,10,0,1,1,null,143,0,0
+1623412474779,23869,query50-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,11139,0,1,1,null,23736,0,1
+1623412498650,153,query50-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,11139,0,1,1,null,149,0,1
+1623412498805,141,query50-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,11139,0,1,1,null,138,0,0
+1623412498947,2927,query52-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,7574,0,1,1,null,2926,0,0
+1623412501878,126,query52-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,7574,0,1,1,null,126,0,0
+1623412502006,108,query52-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,7574,0,1,1,null,108,0,0
+1623412502116,7450,query53-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2629,0,1,1,null,7450,0,0
+1623412509566,146,query53-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2629,0,1,1,null,145,0,1
+1623412509713,130,query53-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2629,0,1,1,null,129,0,0
+1623412509844,2450,query55-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,7052,0,1,1,null,2449,0,0
+1623412512296,122,query55-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,7052,0,1,1,null,121,0,0
+1623412512420,111,query55-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,7052,0,1,1,null,110,0,0
+1623412512533,11015,query56-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2570,0,1,1,null,11015,0,0
+1623412523549,199,query56-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2570,0,1,1,null,198,0,0
+1623412523749,182,query56-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2570,0,1,1,null,182,0,0
+1623412523933,7960,query60-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2722,0,1,1,null,7959,0,0
+1623412531896,196,query60-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2722,0,1,1,null,195,0,0
+1623412532094,187,query60-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,2722,0,1,1,null,187,0,1
+1623412532283,20367,query61-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,66,0,1,1,null,20366,0,0
+1623412552651,267,query61-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,66,0,1,1,null,266,0,0
+1623412552921,242,query61-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,66,0,1,1,null,242,0,0
+1623412553165,29805,query71-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,21425968,0,1,1,null,17793,0,0
+1623412582975,12797,query71-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,21425968,0,1,1,null,192,0,0
+1623412595775,14786,query71-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,21425968,0,1,1,null,178,0,1
+1623412610564,27137,query88-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,163,0,1,1,null,27137,0,0
+1623412637701,228,query88-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,163,0,1,1,null,228,0,0
+1623412637930,215,query88-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,163,0,1,1,null,214,0,0
+1623412638148,1655,query96-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,8,0,1,1,null,1655,0,0
+1623412639804,126,query96-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,8,0,1,1,null,125,0,0
+1623412639931,114,query96-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,8,0,1,1,null,114,0,0
+1623412640046,13129,query98-1,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,10982744,0,1,1,null,4434,0,0
+1623412653178,5775,query98-2,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,10982744,0,1,1,null,131,0,0
+1623412658955,6674,query98-3,200,OK,1 User: Azure Synapse Analytics (With Caching Enabled) 1-1,text,true,,10982744,0,1,1,null,137,0,0
+1623412665647,1163,query2,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,170903,0,2,2,null,1000,0,839
+1623412666813,202,query13,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,43,0,2,2,null,202,0,0
+1623412667018,127,query15,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,1951,0,2,2,null,127,0,0
+1623412667147,143,query26,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,5151,0,2,2,null,142,0,0
+1623412666642,940,query7,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-2,text,true,,5106,0,2,2,null,939,0,786
+1623412667291,298,query31,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,16765,0,2,2,null,297,0,0
+1623412667590,106,query42,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,793,0,3,3,null,106,0,0
+1623412667584,179,query33,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-2,text,true,,1607,0,3,3,null,179,0,0
+1623412667698,135,query50,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,11139,0,3,3,null,132,0,0
+1623412667764,116,query52,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-2,text,true,,7574,0,3,3,null,116,0,0
+1623412667835,130,query53,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,2629,0,3,3,null,130,0,0
+1623412667881,116,query55,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-2,text,true,,7052,0,3,3,null,116,0,0
+1623412667967,185,query56,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,2570,0,3,3,null,185,0,0
+1623412667998,189,query60,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-2,text,true,,2722,0,3,3,null,188,0,0
+1623412668154,351,query61,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,66,0,3,3,null,351,0,0
+1623412667639,1208,query48,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-3,text,true,,10,0,4,4,null,1208,0,852
+1623412668506,474,query88,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-1,text,true,,163,0,4,4,null,473,0,0
+1623412668635,1857,query96,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-4,text,true,,8,0,3,3,null,1857,0,1683
+1623412668188,16399,query71,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-2,text,true,,21425968,0,2,2,null,166,0,0
+1623412668848,20320,query98,200,OK,10 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 2-3,text,true,,10982744,0,1,1,null,384,0,0
+1623412689174,1175,query2,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,170903,0,2,2,null,1002,0,837
+1623412690351,191,query13,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,43,0,2,2,null,191,0,0
+1623412690544,145,query15,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,1951,0,2,2,null,145,0,0
+1623412690692,142,query26,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,5151,0,2,2,null,142,0,0
+1623412690172,949,query7,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,5106,0,2,2,null,948,0,794
+1623412690836,307,query31,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,16765,0,2,2,null,299,0,0
+1623412691144,108,query42,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,793,0,3,3,null,108,0,0
+1623412691123,182,query33,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,1607,0,3,3,null,182,0,0
+1623412691253,160,query50,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,11139,0,3,3,null,159,0,0
+1623412691307,109,query52,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,7574,0,3,3,null,109,0,0
+1623412691417,111,query55,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,7052,0,3,3,null,110,0,0
+1623412691414,131,query53,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,2629,0,3,3,null,130,0,1
+1623412691530,184,query56,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,2570,0,3,3,null,184,0,0
+1623412691547,187,query60,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,2722,0,3,3,null,187,0,0
+1623412691715,252,query61,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,66,0,3,3,null,252,0,0
+1623412691968,279,query88,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,163,0,4,4,null,279,0,0
+1623412691172,1075,query48,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-3,text,true,,10,0,4,4,null,1075,0,878
+1623412692172,2444,query96,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-4,text,true,,8,0,3,3,null,2444,0,2153
+1623412692248,13861,query98,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-2,text,true,,10982744,0,2,2,null,190,0,0
+1623412691735,17390,query71,200,OK,20 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 3-1,text,true,,21425968,0,1,1,null,158,0,0
+1623412709134,1789,query2,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,170903,0,2,2,null,1623,0,1433
+1623412710129,967,query7,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,5106,0,2,2,null,966,0,807
+1623412710926,201,query13,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,43,0,2,2,null,200,0,0
+1623412711098,122,query15,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,1951,0,3,3,null,121,0,0
+1623412711129,172,query26,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,5151,0,3,3,null,171,0,0
+1623412711221,173,query33,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,1607,0,3,3,null,172,0,0
+1623412711302,106,query42,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,793,0,3,3,null,106,0,0
+1623412711396,144,query48,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,10,0,3,3,null,144,0,0
+1623412711409,178,query50,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,11139,0,3,3,null,177,0,0
+1623412711542,115,query52,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,7574,0,3,3,null,115,0,0
+1623412711588,131,query53,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,2629,0,3,3,null,131,0,0
+1623412711659,107,query55,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,7052,0,3,3,null,106,0,0
+1623412711721,179,query56,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,2570,0,3,3,null,179,0,0
+1623412711767,182,query60,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,2722,0,3,3,null,181,0,0
+1623412711902,382,query61,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,66,0,4,4,null,382,0,0
+1623412711129,1240,query31,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-3,text,true,,16765,0,4,4,null,1237,0,888
+1623412712285,167,query96,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-1,text,true,,8,0,4,4,null,167,0,0
+1623412712130,2391,query88,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-4,text,true,,163,0,3,3,null,2391,0,1597
+1623412711951,17920,query71,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-2,text,true,,21425968,0,2,2,null,164,0,0
+1623412712370,19913,query98,200,OK,50 Concurrent User: Azure Synapse Analytics (With Caching Enabled) 4-3,text,true,,10982744,0,1,1,null,174,0,0

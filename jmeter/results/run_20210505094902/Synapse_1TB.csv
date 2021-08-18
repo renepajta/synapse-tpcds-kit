@@ -1,0 +1,121 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1620200943754,19800,query2-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,170903,0,1,1,null,19382,0,2232
+1620200963570,17220,query2-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,170903,0,1,1,null,16998,0,0
+1620200980792,17301,query2-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,170903,0,1,1,null,17035,0,0
+1620200998096,4231,query7-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,5106,0,1,1,null,4230,0,0
+1620201002330,3899,query7-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,5106,0,1,1,null,3898,0,0
+1620201006230,4457,query7-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,5106,0,1,1,null,4456,0,0
+1620201010690,2542,query13-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,43,0,1,1,null,2542,0,0
+1620201013234,2565,query13-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,43,0,1,1,null,2564,0,0
+1620201015800,2533,query13-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,43,0,1,1,null,2533,0,0
+1620201018336,2096,query15-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,1951,0,1,1,null,2094,0,0
+1620201020435,2064,query15-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,1951,0,1,1,null,2063,0,0
+1620201022502,2099,query15-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,1951,0,1,1,null,2098,0,0
+1620201024601,2653,query26-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,5151,0,1,1,null,2652,0,1
+1620201027256,2414,query26-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,5151,0,1,1,null,2413,0,0
+1620201029672,2463,query26-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,5151,0,1,1,null,2462,0,0
+1620201032138,11111,query31-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,16765,0,1,1,null,10275,0,0
+1620201043252,10374,query31-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,16765,0,1,1,null,9559,0,0
+1620201053628,10196,query31-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,16765,0,1,1,null,9518,0,0
+1620201063829,4636,query33-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,1607,0,1,1,null,4636,0,0
+1620201068467,4687,query33-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,1607,0,1,1,null,4687,0,1
+1620201073157,4767,query33-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,1607,0,1,1,null,4767,0,0
+1620201077924,1149,query42-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,793,0,1,1,null,1148,0,0
+1620201079076,1082,query42-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,793,0,1,1,null,1081,0,0
+1620201080160,1090,query42-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,793,0,1,1,null,1090,0,0
+1620201081251,2051,query48-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,10,0,1,1,null,2051,0,0
+1620201083305,2051,query48-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,10,0,1,1,null,2050,0,0
+1620201085358,2047,query48-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,10,0,1,1,null,2047,0,0
+1620201087408,2577,query50-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,11139,0,1,1,null,2449,0,0
+1620201089987,2508,query50-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,11139,0,1,1,null,2382,0,0
+1620201092498,2565,query50-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,11139,0,1,1,null,2435,0,1
+1620201095065,1772,query52-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,7574,0,1,1,null,1771,0,0
+1620201096838,1643,query52-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,7574,0,1,1,null,1642,0,0
+1620201098483,1617,query52-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,7574,0,1,1,null,1616,0,0
+1620201100103,1752,query53-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2629,0,1,1,null,1752,0,0
+1620201101857,1774,query53-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2629,0,1,1,null,1773,0,0
+1620201103634,1875,query53-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2629,0,1,1,null,1875,0,0
+1620201105510,1543,query55-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,7052,0,1,1,null,1543,0,0
+1620201107054,1566,query55-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,7052,0,1,1,null,1566,0,0
+1620201108622,1446,query55-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,7052,0,1,1,null,1445,0,1
+1620201110070,4351,query56-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2570,0,1,1,null,4350,0,0
+1620201114422,4470,query56-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2570,0,1,1,null,4470,0,0
+1620201118894,4415,query56-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2570,0,1,1,null,4414,0,0
+1620201123314,4965,query60-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2722,0,1,1,null,4965,0,0
+1620201128281,4926,query60-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2722,0,1,1,null,4926,0,0
+1620201133208,5223,query60-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,2722,0,1,1,null,5223,0,0
+1620201138433,2975,query61-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,66,0,1,1,null,2974,0,0
+1620201141408,3270,query61-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,66,0,1,1,null,3270,0,0
+1620201144679,3258,query61-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,66,0,1,1,null,3258,0,0
+1620201147939,18347,query71-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,21425968,0,1,1,null,3535,0,0
+1620201166289,14569,query71-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,21425968,0,1,1,null,2521,0,0
+1620201180860,16006,query71-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,21425968,0,1,1,null,2752,0,0
+1620201196868,5483,query88-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,163,0,1,1,null,5483,0,0
+1620201202352,5449,query88-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,163,0,1,1,null,5449,0,0
+1620201207802,7585,query88-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,163,0,1,1,null,7585,0,0
+1620201215393,782,query96-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,8,0,1,1,null,782,0,0
+1620201216177,778,query96-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,8,0,1,1,null,777,0,0
+1620201216957,761,query96-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,8,0,1,1,null,761,0,1
+1620201217721,14733,query98-1,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,10982744,0,1,1,null,3617,0,0
+1620201232456,8967,query98-2,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,10982744,0,1,1,null,3561,0,0
+1620201241426,11390,query98-3,200,OK,1 User: Azure Synapse Analytics (DW1000c) 1-1,text,true,,10982744,0,1,1,null,4000,0,0
+1620201254829,7555,query13,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-3,text,true,,43,0,10,10,null,7555,0,1055
+1620201260825,6572,query48,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-9,text,true,,10,0,10,10,null,6572,0,975
+1620201259823,19661,query42,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-8,text,true,,793,0,10,10,null,19661,0,1003
+1620201267399,17287,query53,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-9,text,true,,2629,0,10,10,null,17287,0,0
+1620201255826,28866,query15,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-4,text,true,,1951,0,10,10,null,28866,0,1043
+1620201279486,5562,query55,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-8,text,true,,7052,0,10,10,null,5561,0,0
+1620201262386,22806,query52,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-3,text,true,,7574,0,10,10,null,22806,0,0
+1620201261822,23743,query50,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-10,text,true,,11139,0,10,10,null,23451,0,1011
+1620201256825,29342,query26,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-5,text,true,,5151,0,10,10,null,29341,0,981
+1620201252827,33345,query2,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-1,text,true,,170903,0,10,10,null,32675,0,1306
+1620201253829,34942,query7,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-2,text,true,,5106,0,10,10,null,34942,0,1044
+1620201286169,3105,query96,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-5,text,true,,8,0,9,9,null,3105,0,0
+1620201285050,7983,query61,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-8,text,true,,66,0,8,8,null,7983,0,0
+1620201285567,15316,query88,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-10,text,true,,163,0,7,7,null,15316,0,0
+1620201258823,51259,query33,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-7,text,true,,1607,0,6,6,null,51259,0,959
+1620201284689,30646,query56,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-9,text,true,,2570,0,5,5,null,30646,0,0
+1620201284694,31416,query60,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-4,text,true,,2722,0,4,4,null,31416,0,0
+1620201286174,30624,query98,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-1,text,true,,10982744,0,3,3,null,16339,0,0
+1620201257826,61618,query31,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-6,text,true,,16765,0,2,2,null,60067,0,922
+1620201285195,34800,query71,200,OK,10 Concurrent User: Azure Synapse Analytics (DW1000c) 2-3,text,true,,21425968,0,1,1,null,14362,0,0
+1620201321999,8843,query13,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-3,text,true,,43,0,11,11,null,8843,0,1071
+1620201327998,10119,query48,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-9,text,true,,10,0,19,19,null,10119,0,903
+1620201336999,3174,query96,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-18,text,true,,8,0,18,18,null,3174,0,933
+1620201334006,20451,query61,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-15,text,true,,66,0,17,17,null,20451,0,991
+1620201327000,27623,query42,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-8,text,true,,793,0,16,16,null,27623,0,961
+1620201336000,32697,query88,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-17,text,true,,163,0,15,15,null,32697,0,896
+1620201330844,38194,query53,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-3,text,true,,2629,0,14,14,null,38194,0,0
+1620201324002,46176,query26,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-5,text,true,,5151,0,13,13,null,46175,0,1008
+1620201322999,47543,query15,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-4,text,true,,1951,0,12,12,null,47542,0,1128
+1620201321000,50957,query7,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-2,text,true,,5106,0,11,11,null,50957,0,1025
+1620201329999,42610,query52,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-11,text,true,,7574,0,10,10,null,42610,0,930
+1620201330998,41754,query55,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-12,text,true,,7052,0,9,9,null,41754,0,908
+1620201328999,44121,query50,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-10,text,true,,11139,0,8,8,null,43942,0,921
+1620201320002,54607,query2,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-1,text,true,,170903,0,7,7,null,53355,0,1065
+1620201325999,54171,query33,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-7,text,true,,1607,0,6,6,null,54171,0,991
+1620201331998,48506,query56,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-13,text,true,,2570,0,5,5,null,48506,0,975
+1620201333009,48197,query60,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-14,text,true,,2722,0,4,4,null,48197,0,945
+1620201338000,45530,query98,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-19,text,true,,10982744,0,3,3,null,32395,0,971
+1620201325002,60902,query31,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-6,text,true,,16765,0,2,2,null,60268,0,950
+1620201334999,58692,query71,200,OK,20 Concurrent User: Azure Synapse Analytics (DW1000c) 3-16,text,true,,21425968,0,1,1,null,38275,0,994
+1620201395698,9766,query13,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-3,text,true,,43,0,12,12,null,9766,0,1054
+1620201401697,11118,query48,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-9,text,true,,10,0,19,19,null,11118,0,1026
+1620201410698,4149,query96,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-18,text,true,,8,0,18,18,null,4149,0,959
+1620201407708,31367,query61,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-15,text,true,,66,0,17,17,null,31367,0,1009
+1620201400697,39527,query42,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-8,text,true,,793,0,16,16,null,39527,0,1015
+1620201409697,36746,query88,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-17,text,true,,163,0,15,15,null,36746,0,1043
+1620201404695,43068,query53,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-12,text,true,,2629,0,14,14,null,43068,0,1032
+1620201396700,51077,query15,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-4,text,true,,1951,0,13,13,null,51077,0,1007
+1620201397700,51330,query26,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-5,text,true,,5151,0,12,12,null,51330,0,1036
+1620201394698,54697,query7,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-2,text,true,,5106,0,11,11,null,54696,0,1102
+1620201403694,46418,query52,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-11,text,true,,7574,0,10,10,null,46417,0,1063
+1620201405465,46202,query55,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-3,text,true,,7052,0,9,9,null,46202,0,0
+1620201402698,49906,query50,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-10,text,true,,11139,0,8,8,null,49791,0,1022
+1620201393701,60447,query2,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-1,text,true,,170903,0,7,7,null,60056,0,1151
+1620201411696,52347,query98,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-19,text,true,,10982744,0,6,6,null,45455,0,989
+1620201399697,66795,query33,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-7,text,true,,1607,0,5,5,null,66794,0,1230
+1620201405699,61243,query56,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-13,text,true,,2570,0,4,4,null,61243,0,1047
+1620201406698,60289,query60,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-14,text,true,,2722,0,3,3,null,60289,0,962
+1620201398708,73152,query31,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-6,text,true,,16765,0,2,2,null,72465,0,1092
+1620201408695,72712,query71,200,OK,50 Concurrent User: Azure Synapse Analytics (DW1000c) 4-16,text,true,,21425968,0,1,1,null,43622,0,1007

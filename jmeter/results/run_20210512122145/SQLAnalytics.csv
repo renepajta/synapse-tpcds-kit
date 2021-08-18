@@ -1,0 +1,121 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1620814910506,62152,query2-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,100784,0,1,1,null,61726,0,9939
+1620814972663,1890,query2-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,100784,0,1,1,null,1881,0,0
+1620814974555,1601,query2-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,100784,0,1,1,null,1593,0,0
+1620814976158,44711,query7-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6423,0,1,1,null,44538,0,0
+1620815020869,3561,query7-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6423,0,1,1,null,3555,0,0
+1620815024431,3505,query7-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6423,0,1,1,null,3500,0,0
+1620815027938,41786,query13-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,150,0,1,1,null,41626,0,0
+1620815069727,4248,query13-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,150,0,1,1,null,4243,0,0
+1620815073980,3990,query13-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,150,0,1,1,null,3985,0,0
+1620815077973,8343,query15-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,1466,0,1,1,null,8187,0,0
+1620815086318,2437,query15-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,1466,0,1,1,null,2433,0,0
+1620815088760,2755,query15-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,1466,0,1,1,null,2752,0,0
+1620815091517,27973,query26-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6437,0,1,1,null,27776,0,0
+1620815119491,3816,query26-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6437,0,1,1,null,3812,0,0
+1620815123309,3175,query26-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6437,0,1,1,null,3170,0,0
+1620815126486,10837,query31-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,33397,0,1,1,null,10476,0,0
+1620815137323,2162,query31-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,33397,0,1,1,null,2155,0,0
+1620815139486,1887,query31-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,33397,0,1,1,null,1879,0,1
+1620815141375,12787,query33-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,1550,0,1,1,null,12532,0,0
+1620815154163,10607,query33-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,1550,0,1,1,null,10356,0,0
+1620815164773,12442,query33-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,1550,0,1,1,null,12298,0,0
+1620815177216,6502,query42-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,358,0,1,1,null,6500,0,0
+1620815183719,2188,query42-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,358,0,1,1,null,2186,0,0
+1620815185908,2026,query42-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,358,0,1,1,null,2024,0,0
+1620815187935,13958,query48-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,26,0,1,1,null,13787,0,0
+1620815201895,3629,query48-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,26,0,1,1,null,3627,0,0
+1620815205525,3629,query48-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,26,0,1,1,null,3628,0,0
+1620815209156,55498,query50-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,9191,0,1,1,null,55220,0,0
+1620815264656,4213,query50-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,9191,0,1,1,null,4211,0,0
+1620815268870,3986,query50-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,9191,0,1,1,null,3983,0,0
+1620815272857,6451,query52-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,4149,0,1,1,null,6449,0,0
+1620815279308,3165,query52-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,4149,0,1,1,null,3164,0,0
+1620815282478,2473,query52-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,4149,0,1,1,null,2471,0,0
+1620815284952,4722,query53-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2647,0,1,1,null,4721,0,0
+1620815289675,890,query53-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2647,0,1,1,null,889,0,0
+1620815290566,883,query53-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2647,0,1,1,null,882,0,0
+1620815291451,5779,query55-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,3656,0,1,1,null,5778,0,0
+1620815297231,2528,query55-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,3656,0,1,1,null,2527,0,0
+1620815299760,4695,query55-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,3656,0,1,1,null,4694,0,0
+1620815304456,12126,query56-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2722,0,1,1,null,11883,0,0
+1620815316584,10786,query56-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2722,0,1,1,null,10575,0,0
+1620815327372,11648,query56-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2722,0,1,1,null,11399,0,0
+1620815339022,10208,query60-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2722,0,1,1,null,10020,0,0
+1620815349231,9838,query60-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2722,0,1,1,null,9668,0,0
+1620815359071,9792,query60-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,2722,0,1,1,null,9648,0,0
+1620815368867,20402,query61-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,75,0,1,1,null,20248,0,0
+1620815389272,7934,query61-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,75,0,1,1,null,7931,0,1
+1620815397208,7494,query61-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,75,0,1,1,null,7492,0,0
+1620815404705,38270,query71-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,8091413,0,1,1,null,30440,0,0
+1620815442976,12046,query71-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,8091413,0,1,1,null,4983,0,0
+1620815455023,11729,query71-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,8091413,0,1,1,null,4512,0,0
+1620815466760,56051,query88-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,163,0,1,1,null,55905,0,0
+1620815522816,14472,query88-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,163,0,1,1,null,14470,0,0
+1620815537289,14578,query88-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,163,0,1,1,null,14577,0,0
+1620815551871,7607,query96-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,16,0,1,1,null,7463,0,0
+1620815559480,2473,query96-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,16,0,1,1,null,2472,0,0
+1620815561955,2200,query96-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,16,0,1,1,null,2198,0,0
+1620815564158,10592,query98-1,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6811755,0,1,1,null,6894,0,0
+1620815574750,5426,query98-2,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6811755,0,1,1,null,1673,0,0
+1620815580179,5231,query98-3,200,OK,1 User: Azure Databricks (SQL Analytics) 1-1,text,true,,6811755,0,1,1,null,1697,0,0
+1620815585442,2657,query2,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-1,text,true,,100784,0,3,3,null,2647,0,1233
+1620815588102,2390,query15,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-1,text,true,,1466,0,6,6,null,2389,0,0
+1620815586439,4519,query7,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-2,text,true,,6423,0,6,6,null,4517,0,1157
+1620815587438,5061,query13,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-3,text,true,,150,0,8,8,null,5058,0,962
+1620815589413,3182,query31,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-5,text,true,,33397,0,8,8,null,3178,0,1286
+1620815588415,4544,query26,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-4,text,true,,6437,0,8,8,null,4543,0,1004
+1620815590493,2499,query42,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-1,text,true,,358,0,8,8,null,2498,0,0
+1620815592500,1109,query53,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-3,text,true,,2647,0,9,9,null,1107,0,0
+1620815590959,3937,query48,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-2,text,true,,26,0,10,10,null,3936,0,0
+1620815592596,2508,query55,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-5,text,true,,3656,0,10,10,null,2508,0,0
+1620815592413,8417,query52,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-8,text,true,,4149,0,10,10,null,8415,0,970
+1620815591416,10041,query50,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-7,text,true,,9191,0,9,9,null,10039,0,924
+1620815594897,7069,query96,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-2,text,true,,16,0,8,8,null,7068,0,0
+1620815595106,10545,query98,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-5,text,true,,6811755,0,7,7,null,5253,0,0
+1620815590415,16758,query33,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-6,text,true,,1550,0,6,6,null,16594,0,1016
+1620815593417,15515,query61,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-9,text,true,,75,0,5,5,null,15514,0,1048
+1620815592993,16052,query60,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-1,text,true,,2722,0,4,4,null,15879,0,0
+1620815592960,17969,query56,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-4,text,true,,2722,0,3,3,null,17790,0,0
+1620815593610,20602,query71,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-3,text,true,,8091413,0,2,2,null,11533,0,0
+1620815594415,22102,query88,200,OK,10 Concurrent User: Azure Databricks (SQL Analytics) 2-10,text,true,,163,0,1,1,null,22101,0,5779
+1620815616523,2221,query2,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-1,text,true,,100784,0,3,3,null,2202,0,862
+1620815618746,2346,query15,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-1,text,true,,1466,0,5,5,null,2346,0,0
+1620815617532,4143,query7,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-2,text,true,,6423,0,6,6,null,4142,0,872
+1620815618515,5213,query13,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-3,text,true,,150,0,8,8,null,5212,0,884
+1620815620516,3544,query31,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-5,text,true,,33397,0,8,8,null,3541,0,949
+1620815619516,4565,query26,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-4,text,true,,6437,0,8,8,null,4563,0,927
+1620815623730,1204,query53,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-3,text,true,,2647,0,9,9,null,1203,0,0
+1620815621513,3513,query42,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-6,text,true,,358,0,9,9,null,3512,0,1048
+1620815621676,3654,query48,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-2,text,true,,26,0,9,9,null,3653,0,0
+1620815624061,2725,query55,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-5,text,true,,3656,0,11,11,null,2724,0,0
+1620815623516,3564,query52,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-8,text,true,,4149,0,10,10,null,3563,0,993
+1620815622516,6093,query50,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-7,text,true,,9191,0,9,9,null,6092,0,1004
+1620815625531,3752,query96,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-10,text,true,,16,0,8,8,null,3751,0,965
+1620815626514,7898,query98,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-11,text,true,,6811755,0,7,7,null,3181,0,943
+1620815624935,10816,query61,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-3,text,true,,75,0,6,6,null,10816,0,0
+1620815621095,18287,query33,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-1,text,true,,1550,0,5,5,null,18074,0,0
+1620815625027,16012,query71,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-6,text,true,,8091413,0,4,4,null,7637,0,0
+1620815624082,19304,query56,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-4,text,true,,2722,0,3,3,null,19140,0,0
+1620815624515,18917,query60,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-9,text,true,,2722,0,2,2,null,18753,0,1010
+1620815625331,18500,query88,200,OK,20 Concurrent User: Azure Databricks (SQL Analytics) 3-2,text,true,,163,0,1,1,null,18499,0,0
+1620815643838,2198,query2,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-1,text,true,,100784,0,3,3,null,2192,0,931
+1620815646037,2326,query15,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-1,text,true,,1466,0,5,5,null,2326,0,0
+1620815644844,4072,query7,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-2,text,true,,6423,0,6,6,null,4070,0,923
+1620815645838,4558,query13,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-3,text,true,,150,0,7,7,null,4557,0,808
+1620815647836,3020,query31,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-5,text,true,,33397,0,8,8,null,3017,0,889
+1620815646836,4480,query26,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-4,text,true,,6437,0,8,8,null,4479,0,856
+1620815648837,3536,query42,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-6,text,true,,358,0,9,9,null,3536,0,899
+1620815648917,3832,query48,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-2,text,true,,26,0,9,9,null,3831,0,0
+1620815650398,2463,query52,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-3,text,true,,4149,0,10,10,null,2462,0,0
+1620815650836,2168,query53,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-8,text,true,,2647,0,10,10,null,2166,0,967
+1620815650857,2333,query55,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-5,text,true,,3656,0,10,10,null,2332,0,0
+1620815649837,5178,query50,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-7,text,true,,9191,0,9,9,null,5176,0,1065
+1620815652862,2505,query96,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-3,text,true,,16,0,8,8,null,2504,0,0
+1620815653006,6098,query98,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-8,text,true,,6811755,0,7,7,null,2082,0,0
+1620815652375,8447,query61,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-6,text,true,,75,0,6,6,null,8446,0,0
+1620815648365,15022,query33,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-1,text,true,,1550,0,5,5,null,14840,0,0
+1620815651317,13710,query56,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-4,text,true,,2722,0,4,4,null,13574,0,0
+1620815652750,12779,query71,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-2,text,true,,8091413,0,3,3,null,5568,0,0
+1620815651835,13920,query60,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-9,text,true,,2722,0,2,2,null,13786,0,957
+1620815652836,16341,query88,200,OK,50 Concurrent User: Azure Databricks (SQL Analytics) 4-10,text,true,,163,0,1,1,null,16340,0,960

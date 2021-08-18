@@ -1,0 +1,48 @@
+2021-06-11 13:38:38,603 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-06-11 13:38:38,620 INFO o.a.j.JMeter: Loading user properties from: C:\apache-jmeter-5.4.1\bin\user.properties
+2021-06-11 13:38:38,621 INFO o.a.j.JMeter: Loading system properties from: C:\apache-jmeter-5.4.1\bin\system.properties
+2021-06-11 13:38:38,622 INFO o.a.j.JMeter: Setting JMeter property: DatabricksDatabaseName=dataset_1tb
+2021-06-11 13:38:38,622 INFO o.a.j.JMeter: Setting JMeter property: DatabricksConnectionString=jdbc:spark://adb-8134281829011321.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/8134281829011321/0504-155012-sweep261;AuthMech=3;UID=token;PWD=dapic5b3353fc1890707ac56685ba3f070b5-2
+2021-06-11 13:38:38,622 INFO o.a.j.JMeter: Setting JMeter property: SQLAnalyticsConnectionString=jdbc:spark://adb-8134281829011321.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/endpoints/028cdde766d03122;UID=token;PWD=dapi9963b7ab5764db4aab1aaa1794441ab2-2
+2021-06-11 13:38:38,622 INFO o.a.j.JMeter: Setting JMeter property: SynapseConnectionString=jdbc:sqlserver://synanalytics20pocwe.sql.azuresynapse.net:1433;database=DemoDW;user=tester@synanalytics20pocwe;password=bwKm1u8qEb344MXtRAPo;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30;
+2021-06-11 13:38:38,623 INFO o.a.j.JMeter: Setting JMeter property: NumberOfQueries=99
+2021-06-11 13:38:38,623 INFO o.a.j.JMeter: Setting JMeter property: RepeatQueryCount=3
+2021-06-11 13:38:38,623 INFO o.a.j.JMeter: Setting JMeter property: QueriesDirectory=C:/Users/repajta/Documents/MyRepos/synapse-tpcds-kit/jmeter/queries
+2021-06-11 13:38:38,623 INFO o.a.j.JMeter: Setting JMeter property: QueriesConfig=C:/Users/repajta/Documents/MyRepos/synapse-tpcds-kit/jmeter/queries/queries.csv
+2021-06-11 13:38:38,623 INFO o.a.j.JMeter: Setting JMeter property: ResultsDirectory=C:/Users/repajta/Documents/MyRepos/synapse-tpcds-kit/jmeter/results/run_20210611013216
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: Version 5.4.1
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: java.version=1.8.0_262
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: os.name=Windows 10
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: os.arch=amd64
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: os.version=10.0
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: file.encoding=Cp1252
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: java.awt.headless=null
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-06-11 13:38:38,634 INFO o.a.j.JMeter: Available Processors =8
+2021-06-11 13:38:38,639 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-06-11 13:38:38,639 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-06-11 13:38:38,639 INFO o.a.j.JMeter: JMeterHome=C:\apache-jmeter-5.4.1
+2021-06-11 13:38:38,639 INFO o.a.j.JMeter: user.dir  =C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit
+2021-06-11 13:38:38,640 INFO o.a.j.JMeter: PWD       =C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit
+2021-06-11 13:38:38,687 INFO o.a.j.JMeter: IP: 172.22.20.86 Name: DESKTOP-UF191TR FullName: 172.22.20.86
+2021-06-11 13:38:38,819 INFO o.a.j.JMeter: Setting LAF to: laf:javax.swing.plaf.nimbus.NimbusLookAndFeel
+2021-06-11 13:38:39,030 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2021-06-11 13:38:40,956 INFO o.a.j.JMeter: Loading file: C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter\TPC-DS Performance Benchmark - Synapse.jmx
+2021-06-11 13:38:40,957 INFO o.a.j.s.FileServer: Default base='C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit'
+2021-06-11 13:38:40,959 INFO o.a.j.s.FileServer: Set new base='C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter'
+2021-06-11 13:38:41,140 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-06-11 13:38:41,156 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-06-11 13:38:41,157 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-06-11 13:38:41,159 INFO o.a.j.s.SaveService: Loading file: C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter\TPC-DS Performance Benchmark - Synapse.jmx
+2021-06-11 13:38:41,219 INFO o.a.j.s.FileServer: Set new base='C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter'
+2021-06-11 13:38:41,495 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-06-11 13:38:41,495 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-06-11 13:38:41,495 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-06-11 13:38:41,495 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-06-11 13:38:41,684 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-06-11 13:38:41,841 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-06-11 13:38:41,939 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-06-11 13:38:42,018 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-06-11 13:38:42,086 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser

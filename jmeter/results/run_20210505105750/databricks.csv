@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1620205071830,2551555,query2-1,200,OK,1 User: Azure Databricks 1-1,text,true,,100784,0,1,1,null,2550683,0,2467
+1620207623398,262277,query2-2,200,OK,1 User: Azure Databricks 1-1,text,true,,100784,0,1,1,null,261824,0,0
+1620207885678,244089,query2-3,200,OK,1 User: Azure Databricks 1-1,text,true,,100784,0,1,1,null,243808,0,0
+1620208129774,3371164,query7-1,08S01 500593,java.sql.SQLException: [Simba][SparkJDBCDriver](500593) Communication link failure. Failed to connect to server. Reason: com.simba.spark.jdbc42.internal.apache.http.NoHttpResponseException: adb-8134281829011321.1.azuredatabricks.net:443 failed to respond.,1 User: Azure Databricks 1-1,text,false,,232,0,1,1,null,0,0,0
+1620211501064,243339,query7-2,08S01 500593,java.sql.SQLException: [Simba][SparkJDBCDriver](500593) Communication link failure. Failed to connect to server. Reason: com.simba.spark.jdbc42.internal.apache.http.NoHttpResponseException: adb-8134281829011321.1.azuredatabricks.net:443 failed to respond.,1 User: Azure Databricks 1-1,text,false,,232,0,1,1,null,0,0,1
+1620211744538,370243,query7-3,200,OK,1 User: Azure Databricks 1-1,text,true,,6646,0,1,1,null,370027,0,0
+1620212114786,1870274,query13-1,200,OK,1 User: Azure Databricks 1-1,text,true,,151,0,1,1,null,1870175,0,0
+1620213985062,471141,query13-2,200,OK,1 User: Azure Databricks 1-1,text,true,,151,0,1,1,null,471055,0,0
+1620214456205,460992,query13-3,200,OK,1 User: Azure Databricks 1-1,text,true,,151,0,1,1,null,460888,0,0
+1620214917201,1065619,query15-1,200,OK,1 User: Azure Databricks 1-1,text,true,,1576,0,1,1,null,1065309,0,0
+1620215982822,619603,query15-2,200,OK,1 User: Azure Databricks 1-1,text,true,,1576,0,1,1,null,619357,0,0
+1620216602443,610899,query15-3,200,OK,1 User: Azure Databricks 1-1,text,true,,1576,0,1,1,null,610812,0,0
+1620217213345,1133643,query26-1,200,OK,1 User: Azure Databricks 1-1,text,true,,6674,0,1,1,null,1133548,0,0
+1620218346991,177191,query26-2,200,OK,1 User: Azure Databricks 1-1,text,true,,6674,0,1,1,null,177079,0,0
+1620218524186,543349,query26-3,200,OK,1 User: Azure Databricks 1-1,text,true,,6674,0,1,1,null,543237,0,0

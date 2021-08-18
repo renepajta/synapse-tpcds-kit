@@ -1,79 +1,48 @@
-2021-05-03 08:54:12,214 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2021-05-03 08:54:12,231 INFO o.a.j.JMeter: Loading user properties from: C:\apache-jmeter-5.4.1\bin\user.properties
-2021-05-03 08:54:12,239 INFO o.a.j.JMeter: Loading system properties from: C:\apache-jmeter-5.4.1\bin\system.properties
-2021-05-03 08:54:12,239 INFO o.a.j.JMeter: Setting JMeter property: DatabricksDatabaseName=dataset_10tb
-2021-05-03 08:54:12,239 WARN o.a.j.JMeter: Removing JMeter property: DatabricksConnectionString
-2021-05-03 08:54:12,239 WARN o.a.j.JMeter: Removing JMeter property: SQLAnalyticsConnectionString
-2021-05-03 08:54:12,239 WARN o.a.j.JMeter: Removing JMeter property: SynapseConnectionString
-2021-05-03 08:54:12,239 INFO o.a.j.JMeter: Setting JMeter property: NumberOfQueries=99
-2021-05-03 08:54:12,239 INFO o.a.j.JMeter: Setting JMeter property: RepeatQueryCount=3
-2021-05-03 08:54:12,239 INFO o.a.j.JMeter: Setting JMeter property: ResultsDirectory=C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter\results\run_20210503085407
-2021-05-03 08:54:12,257 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
-2021-05-03 08:54:12,257 INFO o.a.j.JMeter: Version 5.4.1
-2021-05-03 08:54:12,257 INFO o.a.j.JMeter: java.version=1.8.0_262
-2021-05-03 08:54:12,257 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: os.name=Windows 10
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: os.arch=amd64
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: os.version=10.0
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: file.encoding=Cp1252
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: java.awt.headless=true
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: Max memory     =1073741824
-2021-05-03 08:54:12,258 INFO o.a.j.JMeter: Available Processors =8
-2021-05-03 08:54:12,268 INFO o.a.j.JMeter: Default Locale=English (EN)
-2021-05-03 08:54:12,268 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2021-05-03 08:54:12,268 INFO o.a.j.JMeter: JMeterHome=C:\apache-jmeter-5.4.1
-2021-05-03 08:54:12,268 INFO o.a.j.JMeter: user.dir  =C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter
-2021-05-03 08:54:12,269 INFO o.a.j.JMeter: PWD       =C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter
-2021-05-03 08:54:12,271 INFO o.a.j.JMeter: IP: 192.168.2.113 Name: DESKTOP-UF191TR FullName: host.docker.internal
-2021-05-03 08:54:12,278 INFO o.a.j.s.FileServer: Default base='C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter'
-2021-05-03 08:54:12,279 INFO o.a.j.s.FileServer: Set new base='C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter'
-2021-05-03 08:54:12,453 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2021-05-03 08:54:12,482 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2021-05-03 08:54:12,482 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2021-05-03 08:54:12,482 INFO o.a.j.s.SaveService: Loading file: C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter\TPC-DS Performance Benchmark.jmx
-2021-05-03 08:54:12,584 INFO o.a.j.JMeter: Creating summariser <summary>
-2021-05-03 08:54:12,589 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
-2021-05-03 08:54:12,590 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter\results\run_20210503085407\Results.csv
-2021-05-03 08:54:12,590 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\apache-jmeter-5.4.1\bin\reportgenerator.properties
-2021-05-03 08:54:12,599 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
-2021-05-03 08:54:12,614 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
-2021-05-03 08:54:12,617 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
-2021-05-03 08:54:12,626 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
-2021-05-03 08:54:12,626 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
-2021-05-03 08:54:12,626 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
-2021-05-03 08:54:12,626 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
-2021-05-03 08:54:12,626 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
-2021-05-03 08:54:12,627 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
-2021-05-03 08:54:12,627 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
-2021-05-03 08:54:12,632 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,632 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,632 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,632 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,633 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,633 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,633 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,633 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,633 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,634 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2021-05-03 08:54:12,635 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
-2021-05-03 08:54:12,636 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
-2021-05-03 08:54:12,636 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
-2021-05-03 08:54:12,636 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
-2021-05-03 08:54:12,636 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
-2021-05-03 08:54:12,637 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
-2021-05-03 08:54:12,644 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2021-05-03 08:54:12,645 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2021-05-03 08:54:12,645 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2021-05-03 08:54:12,653 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2021-05-03 08:54:12,654 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2021-05-03 08:54:13,215 INFO o.a.j.r.ResultCollector: Folder at C:\Users\repajta\Documents\MyRepos\synapse-tpcds-kit\jmeter\results\run_20210503085407 was created
-2021-05-03 08:54:13,231 INFO o.a.j.JMeter: Running test (1620024853231)
-2021-05-03 08:54:13,272 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Single User: Azure Synapse Analytics
-2021-05-03 08:54:13,272 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Single User: Azure Synapse Analytics.
-2021-05-03 08:54:13,272 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2021-05-03 08:54:13,272 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
-2021-05-03 08:54:13,277 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2021-05-03 08:54:13,277 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2021-05-03 08:54:13,279 INFO o.a.j.t.JMeterThread: Thread started: Single User: Azure Synapse Analytics 1-1
-2021-05-03 08:54:16,328 INFO o.a.j.r.ResultCollector: Shutdown hook started
-2021-05-03 08:54:16,329 INFO o.a.j.r.ResultCollector: Shutdown hook ended
+2021-08-18 09:57:41,572 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-08-18 09:57:41,686 INFO o.a.j.JMeter: Loading user properties from: C:\apache-jmeter-5.4.1\bin\user.properties
+2021-08-18 09:57:41,716 INFO o.a.j.JMeter: Loading system properties from: C:\apache-jmeter-5.4.1\bin\system.properties
+2021-08-18 09:57:41,717 INFO o.a.j.JMeter: Setting JMeter property: DatabricksDatabaseName=dataset_1tb
+2021-08-18 09:57:41,718 INFO o.a.j.JMeter: Setting JMeter property: DatabricksConnectionString=jdbc:spark://adb-8134281829011321.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/8134281829011321/0504-155012-sweep261;AuthMech=3;UID=token;PWD=dapic5b3353fc1890707ac56685ba3f070b5-2
+2021-08-18 09:57:41,718 INFO o.a.j.JMeter: Setting JMeter property: SQLAnalyticsConnectionString=jdbc:spark://adb-8134281829011321.1.azuredatabricks.net:443/default;transportMode=http;ssl=1;AuthMech=3;httpPath=/sql/1.0/endpoints/028cdde766d03122;UID=token;PWD=dapi9963b7ab5764db4aab1aaa1794441ab2-2
+2021-08-18 09:57:41,719 INFO o.a.j.JMeter: Setting JMeter property: SynapseConnectionString=jdbc:sqlserver://synanalytics20pocwe.sql.azuresynapse.net:1433;database=DemoDW;user=tester@synanalytics20pocwe;password=bwKm1u8qEb344MXtRAPo;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.sql.azuresynapse.net;loginTimeout=30;
+2021-08-18 09:57:41,719 INFO o.a.j.JMeter: Setting JMeter property: NumberOfQueries=99
+2021-08-18 09:57:41,719 INFO o.a.j.JMeter: Setting JMeter property: RepeatQueryCount=3
+2021-08-18 09:57:41,720 INFO o.a.j.JMeter: Setting JMeter property: QueriesDirectory=C:/Users/repajta/OneDrive - Microsoft/Documents/MyRepos/synapse-tpcds-kit/jmeter/queries
+2021-08-18 09:57:41,720 INFO o.a.j.JMeter: Setting JMeter property: QueriesConfig=C:/Users/repajta/OneDrive - Microsoft/Documents/MyRepos/synapse-tpcds-kit/jmeter/queries/queries.csv
+2021-08-18 09:57:41,720 INFO o.a.j.JMeter: Setting JMeter property: ResultsDirectory=C:/Users/repajta/Documents/MyRepos/synapse-tpcds-kit/jmeter/results/run_20210818095713
+2021-08-18 09:57:41,760 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2021-08-18 09:57:41,760 INFO o.a.j.JMeter: Version 5.4.1
+2021-08-18 09:57:41,760 INFO o.a.j.JMeter: java.version=1.8.0_262
+2021-08-18 09:57:41,761 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2021-08-18 09:57:41,761 INFO o.a.j.JMeter: os.name=Windows 10
+2021-08-18 09:57:41,761 INFO o.a.j.JMeter: os.arch=amd64
+2021-08-18 09:57:41,761 INFO o.a.j.JMeter: os.version=10.0
+2021-08-18 09:57:41,762 INFO o.a.j.JMeter: file.encoding=Cp1252
+2021-08-18 09:57:41,762 INFO o.a.j.JMeter: java.awt.headless=null
+2021-08-18 09:57:41,763 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-08-18 09:57:41,763 INFO o.a.j.JMeter: Available Processors =8
+2021-08-18 09:57:41,782 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-08-18 09:57:41,783 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-08-18 09:57:41,784 INFO o.a.j.JMeter: JMeterHome=C:\apache-jmeter-5.4.1
+2021-08-18 09:57:41,784 INFO o.a.j.JMeter: user.dir  =C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter
+2021-08-18 09:57:41,786 INFO o.a.j.JMeter: PWD       =C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter
+2021-08-18 09:57:42,121 INFO o.a.j.JMeter: IP: 192.168.1.54 Name: DESKTOP-UF191TR FullName: MININT-Johnny.redmond.corp.microsoft.com
+2021-08-18 09:57:42,908 INFO o.a.j.JMeter: Setting LAF to: laf:javax.swing.plaf.nimbus.NimbusLookAndFeel
+2021-08-18 09:57:43,773 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2021-08-18 09:57:52,458 INFO o.a.j.JMeter: Loading file: C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter\TPC-DS Performance Benchmark - Synapse.jmx
+2021-08-18 09:57:52,466 INFO o.a.j.s.FileServer: Default base='C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter'
+2021-08-18 09:57:52,471 INFO o.a.j.s.FileServer: Set new base='C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter'
+2021-08-18 09:57:53,530 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-08-18 09:57:53,646 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-08-18 09:57:53,652 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-08-18 09:57:53,666 INFO o.a.j.s.SaveService: Loading file: C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter\TPC-DS Performance Benchmark - Synapse.jmx
+2021-08-18 09:57:54,040 INFO o.a.j.s.FileServer: Set new base='C:\Users\repajta\OneDrive - Microsoft\Documents\MyRepos\synapse-tpcds-kit\jmeter'
+2021-08-18 09:57:55,681 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-08-18 09:57:55,682 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-08-18 09:57:55,683 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-08-18 09:57:55,683 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-08-18 09:57:56,428 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-08-18 09:57:57,073 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-08-18 09:57:57,468 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-08-18 09:57:57,826 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2021-08-18 09:57:58,080 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
